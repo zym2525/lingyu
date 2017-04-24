@@ -1,0 +1,21 @@
+$('#exit').click(function(){
+	var t=new Date().getTime();
+	$.ajax({
+		type:'POST',
+		async:false,
+		url:'http://120.26.95.49:8081/userCenter/user/logout',
+		data:{
+			'loginName':getCookie('loginName'),
+			'clientId':'dd0557d8-ad20-4f41-a288-6f6986225362',
+			'accessToken':getCookie('accessToken'),
+			'msgId':t+''
+		},
+		success:function(json){
+			if(json.retCode==0000){
+				alert('退出');
+			}else{
+				alert('退出失败')
+			}
+		},
+	});
+});

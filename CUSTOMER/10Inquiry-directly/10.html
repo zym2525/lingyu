@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../libs/base.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="../libs/iosSelect.css"/>
+	</head>
+	<body style="visibility: hidden;">
+		<div class="wrap">
+			<div id="hintBox">询价成功！</div>
+			<header>
+				<img src="../img/arrow2.png" alt="arrow" id="arrow"/>
+				<h2 localeString='title'>直接询价</h2>
+			</header>
+			<section class="content">
+				<ul>
+					<li class="box">
+						<div class="title">
+							<i class="s"></i>
+							<span localeString='field1'>起运港</span>
+							<b>(PORT OF LOADING)</b>
+						</div>
+						<div class="container">
+							<span class="name" localeString='field1'>起运港</span>
+							<div class="time selector">
+								<em id="pol"></em>
+								<i></i>
+							</div>
+						</div>
+					</li>
+					<li class="box">
+						<div class="title">
+							<i class="s"></i>
+							<span localeString='field2'>目的港</span>
+							<b>(FINAL DESTINATION)</b>
+						</div>
+						<div class="container">
+							<span class="name" localeString='field2'>目的港</span>
+							<div class="time">
+								<em id="pod" code='ACFUN'></em>
+								<i></i>
+							</div>
+						</div>
+					</li>
+					<li class="box">
+						<div class="title">
+							<i class="s"></i>
+							<span localeString='field3'>船公司</span>
+							<b>(SHOPPING LINE)</b>
+						</div>
+						<div class="container" id="carryBox">
+							<span class="name" localeString='field3'>船公司</span>
+							<div class="time selector">
+								<em id="carry" code='0'>全部</em>
+								<i></i>
+							</div>
+						</div>
+					</li>
+					<li class="quantity">
+						<div class="title title1">
+							<i class="s"></i>
+							<span localeString='field9'>箱型箱量</span>
+						</div>
+						<div class="container">
+							<div class="cell">
+								<span class="name">20GP</span>
+								<input type="number" value="0" id="Num20gp"/>
+							</div>
+							<div class="cell">
+								<span class="name">40GP</span>
+								<input type="number" value="0" id="Num40gp"/>
+							</div>
+							<div class="cell">
+								<span class="name">40HQ</span>
+								<input type="number" value="0" id="Num40hq"/>
+							</div>
+							<div class="cell">
+								<span class="name">45HC</span>
+								<input type="number" value="0" id="Num45hc"/>
+							</div>
+						</div>
+					</li>
+					<li class="box">
+						<div class="title">
+							<i class="s"></i>
+							<span localeString='field10'>预计出货时间</span>
+						</div>
+						<div class="container" id="timeBox">
+							<span class="name" localeString='field11'>选择时间</span>
+							<div class="time" id="time">
+								<em id="expectDate" class="time_selector">2017-01-30</em>
+								<i></i>
+							</div>
+						</div>
+					</li>
+					<li class="box cb">
+						<div class="title">
+							<i class="s"></i>
+							<span localeString='field12'>其他事项</span>
+							<b>(REMARK)</b>
+						</div>
+						<div class="text lt" id="text">
+							<input type="text" id="remark"/>
+							<span localeString='field4'>请输入其他事项(不超过15字)</span>
+						</div>
+					</li>
+					<!--<li class="box cb">
+						<div class="title">
+							<i class="s"></i>
+							客户
+							<b>(CUSTOMER)</b>
+						</div>
+						<div class="text lt">
+							<input type="text" name="" id="" value="" />
+							<span>请输入客户名称</span>
+						</div>
+					</li>-->
+				</ul>
+			</section>
+			<footer>
+				<a localeString='field13' id="btn">询价</a>
+				<div class="hint">
+					<i></i>
+					<b>温馨提示：</b>
+					<span>询价后20分钟内您将收到最佳物流方案，方案将以短信、邮件或App推送的方式进行提醒</span>
+				</div>
+			</footer>
+		</div>
+	</body>	
+		<script src="../libs/zepto.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../libs/main.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/focus.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../libs/cookie.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/resource.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../libs/setLanguage.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../libs/adaptive.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../libs/iosSelect.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/common.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/select.js" type="text/javascript" charset="utf-8"></script>
+</html>

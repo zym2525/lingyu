@@ -1,0 +1,346 @@
+html{
+	height: 100%;
+	font-size: 100px;
+}
+body{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	-webkit-user-select: none;
+}
+.wrap{
+	width: 7.5rem;
+	margin: 0 auto;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+#hintBox{
+	width: 3rem;
+	height: 1rem;
+	border-radius: 0.2rem;
+	text-align: center;
+	font-size: 0.36rem;
+	line-height: 1rem;
+	color: #e4ede9;
+	background-color: #323232;
+	position: fixed;
+	left: 50%;
+	margin-left: -1.5rem;
+	top: 30%;
+	display: none;
+	z-index: 222;
+}
+#expactDate{
+	padding: 0.15rem 0;
+}
+header{
+	height: 0.9rem;
+	padding: 0.38rem 0.24rem 0;
+	background-color: #097b47;
+	position: relative;
+}
+header .arrow{
+	height: 0.36rem;
+	padding-top: 0.2rem;
+	padding-bottom: 0.2rem;
+	padding-right: 0.3rem;
+	position: absolute;
+	left: 0.2rem;
+	top: 0.45rem;
+}
+header h2{
+	font-size: 0.34rem;
+	color: #fff;
+	margin: 0.3rem 0 0.42rem;
+	text-align: center;
+}
+.topT{
+	background-color: #097b47;
+	height: 3.2rem;
+	display: flex;
+	justify-content: center;
+	position: relative;
+}
+.topT .bg{
+	width: 7.02rem;
+	height: 3rem;
+	background: url(../img/bg.png) no-repeat center;
+	background-size: cover;
+	position: relative;
+	font-size: 0.26rem;
+	color:#a1a1a1 ;
+	/*margin: 0 auto;*/
+}
+.topT .bg .line{
+	width: 6.74rem;
+	height: 1px;
+	background: url(../img/line1.png) no-repeat;
+	position: absolute;
+	top: 0.5rem;
+	left: 0.14rem;
+}
+.topT .destination{
+	display: flex;
+	position: absolute;
+	top: 0.51rem;
+	left: 0;
+}
+.topT .destination .start_box,.topT .destination .end_box{
+	width: 2.6rem;
+	height: 0.88rem;
+	padding: 0.61rem 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	margin-left: 0.18rem;
+}
+.topT .destination .end_box{
+	margin-left:0;
+	margin-right: 0.18rem;
+}
+.topT .destination .start_box .start,.topT .destination .end_box .end{
+	display: flex;
+	justify-content: center;
+	font-size: 0.28rem;
+	line-height: 0.28rem;
+}
+.topT .destination .start_box .start img,.topT .destination .end_box .end img{
+	width: 0.26rem;
+	height: 0.26rem;
+	margin-right: 0.16rem;
+}
+.topT .destination .start_box .name,.topT .destination .end_box .name{
+	font-size:0.28rem;
+	color: #2e3f51;
+	font-weight: bold;
+	text-align: center;
+}
+.topT .destination .icon{
+	width: 1.46rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.topT .destination .icon img:first-child{
+	width: 0.44rem;
+	height: 0.47rem;
+	margin-bottom: 0.14rem;
+}
+.topT .destination .icon img:last-child{
+	width: 1.46rem;
+	height: 0.11rem;
+}
+.content{
+	background-color: #f3f5f7;
+	flex: 1;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+}
+.block{
+	margin-top: 0.18rem;
+	font-size: 0.28rem;
+	color: #333;
+	background-color: #fff;
+}
+.block dt{
+	height: 0.72rem;
+	margin-left: 0.1rem;
+	position: relative;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+.block dt em,.content ul li em{
+	font-size: 0.28rem;
+}
+.content ul li em{
+	padding: 0.15rem 0;
+}
+.block dt .l{
+	width: 7.4rem;
+	height: 1px;
+	background: url(../img/line1.png) no-repeat;
+	position: absolute;
+	bottom:-1px;
+	left: 0;
+}
+.block dt span{
+	font-size: 0.24rem;
+	color: #999;
+	margin-left: 0.1rem;
+}
+.block dt .s{
+	display: block;
+	width: 0.05rem;
+	height: 0.2rem;
+	background-color: #2e3f51;
+	border-radius: 0.02rem;
+	margin: 0 0.1rem 0 0.16rem;
+}
+.block dd{
+	height: 0.88rem;
+	width: 7.02rem;
+	margin-left: 0.24rem;
+	line-height: 0.88rem;
+	border-bottom: 1px solid #dcdcdc;
+	font-size: 0.28rem;
+}
+.block .cb{
+	border-bottom:none;
+}
+.block dd .val{
+	color: #999;
+}
+.block dd img{
+	width: 0.5rem;
+	margin: 0.19rem 0.18rem 0 -0.06rem;
+}
+.content ul{
+	margin-top: 0.18rem;
+	font-size: 0.28rem;
+	color: #333;
+	overflow: hidden;
+	background-color: #fff;
+}
+.content ul li{
+	width: 7.02rem;
+	margin-left: 0.24rem;
+	border-bottom: 1px solid #dcdcdc;
+}
+.content ul .cb{
+	border-bottom:none;
+}
+.content ul li .title{
+	margin-top: 0.3rem;
+	display: flex;
+	align-items: center;
+	font-size: 0.28rem;
+	color: #333;
+}
+.content ul li .title1{
+	margin-top: 0.24rem;
+}
+.content ul li .title .s{
+	display: block;
+	width: 0.05rem;
+	height: 0.2rem;
+	background-color: #2e3f51;
+	border-radius: 0.02rem;
+	margin-right: 0.16rem;
+}
+.content ul .quantity .container{
+	height: 1.6rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.content ul .quantity .container .cell{
+	width: 1.46rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 0.26rem;
+}
+.content ul .quantity .container .cell input{
+	display: block;
+	width: 0.68rem;
+	height: 0.58rem;
+	font-size: 0.28rem;
+	border: 1px solid #aaa;
+	border-radius: 4px;
+	color: #666;
+	text-align: center;
+}
+.content ul .time_box .container{
+	margin: 0.5rem 0 0.3rem;
+	display: flex;
+	justify-content: space-between;
+	color: #666;
+}
+.content ul .time_box .container .name{
+	margin-left: 0.16rem;
+	font-size: 0.3rem;
+}
+.content ul .time_box .container .time{
+	display: flex;
+}
+.content ul .time_box .container .time i{
+	display: block;
+	width: 0.14rem;
+	height: 0.24rem;
+	background-image: url(../img/arrow3.png);
+	background-size: cover;
+	margin-top: 0.15rem;
+	margin-left:0.2rem;
+	margin-right:0.06rem;
+}
+.content ul .remarks textarea{
+	width: 7rem;
+	height: 1.62rem;
+	resize: none;
+	border: 1px solid #dcdcdc;
+	border-radius: 2px;
+	padding-top: 0.3rem;
+	padding-left: 0.3rem;
+	margin: 0.3rem 0 0.4rem;
+	font-size: 0.28rem;
+	box-sizing: border-box;
+	color: #666;
+}
+.content ul .remarks .text_box{
+	position: relative;
+}
+.content ul .remarks .text_box span{
+	position: absolute;
+	font-size: 0.28rem;
+	color: #999;
+	left: 0.3rem;
+	top: 0.64rem;
+}
+footer{
+	height: 3.19rem;
+	background-color: #f3f5f7;
+	font-size: 0.24rem;
+	color: #666;
+	line-height: 0.36rem;
+}
+footer a{
+	display: block;
+	width: 7.1rem;
+	height: 0.9rem;
+	border-radius: 0.06rem;
+	text-align: center;
+	line-height: 0.9rem;
+	font-size: 0.34rem;
+	color: #fff;
+	background-color: #2e3f51;
+	margin: 0.6rem auto 0.24rem;
+}
+footer .hint{
+	display: flex;
+}
+footer .hint span{
+	display: block;
+	width: 5.33rem;
+	margin-top: -0.03rem;
+}
+footer .hint b{
+	display: block;
+	color: #333;
+	line-height: 0.36rem;
+	margin-top: -0.03rem;
+	font-size: 0.24rem;
+}
+footer .hint i{
+	display: block;
+	width: 0.26rem;
+	height: 0.26rem;
+	background-image:url(../img/hint.png);
+	background-size: cover;
+	margin-left: 0.4rem;
+	margin-right: 0.1rem;
+}

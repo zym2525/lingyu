@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../libs/base.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	</head>
+	<body style="visibility: hidden;">
+		<div class="wrap">
+			<header>
+				<img src="img/arrow2.png" alt="arrow" class="arrow"/>
+				<h2 localeString='title'>运价详细</h2>
+				<div class="bg">
+					<div class="line"></div>
+					<ul class="destination">
+						<li class="start_box">
+							<div class="start">
+								<img src="img/start.png" alt="start"/>
+								<span localeString='field1'>起运港</span>
+							</div>
+							<div class="name">{{polName}}</div>
+						</li>
+						<li class="icon">
+							<img src="img/ship_main.png" alt="ship_main"/>
+							<img src="img/arrow.png" alt="arrow"/>
+						</li>
+						<li class="end_box">
+							<div class="end">
+								<img src="img/finish.png" alt="finish"/>
+								<span localeString='field2'>目的港</span>
+							</div>
+							<div class="name">{{podName}}</div>
+						</li>
+					</ul>
+				</div>
+			</header>
+			<section class="content">
+				<dl class="msg block">
+					<dt>
+						<i class="s"></i>
+						<em localeString='field12'>船期信息</em>
+						<i class="l"></i>
+					</dt>
+					<dd class="clearfix">
+						<img src="img/icon1.png" alt="icon1" class="fl"/>
+						<span class="name fl" localeString='field3'>船公司</span>
+						<span class="val fr">{{carryCode}}</span>
+					</dd>
+					<dd class="clearfix">
+						<img src="img/icon2.png" alt="icon2" class="fl"/>
+						<span class="name fl" localeString='field4'>中转港</span>
+						<span class="val fr">{{potName}}</span>
+					</dd>
+					<dd class="clearfix">
+						<img src="img/icon3.png" alt="icon3" class="fl"/>
+						<span class="name fl" localeString='field5'>船程</span>
+						<span class="val fr">{{sailingDay}}</span>
+					</dd>
+					<dd class="clearfix">
+						<img src="img/icon4.png" alt="icon4" class="fl"/>
+						<span class="name fl" localeString='field6'>开船</span>
+						<span class="val fr">{{etd}}</span>
+					</dd>
+					<dd class="clearfix cb">
+						<img src="img/icon5.png" alt="icon5" class="fl"/>
+						<span class="name fl" localeString='field7'>截关</span>
+						<span class="val fr">{{customsClearance}}</span>
+					</dd>
+				</dl>
+				<dl class="freight block">
+					<dt>
+						<i class="s"></i>
+						<em localeString='field9'>运费</em>
+						<span localeString='field14' id='hyfCurrency'></span>
+						<i class="l"></i>
+					</dt>
+					<dd class="cb">
+						<ul>
+							<li>
+								<span class="kind">20GP</span>
+								<span class="price">{{cost20gp}}</span>
+							</li>
+							<li>
+								<span class="kind">40GP</span>
+								<span class="price">{{cost40gp}}</span>
+							</li>
+							<li>
+								<span class="kind">40HQ</span>
+								<span class="price">{{cost40hq}}</span>
+							</li>
+							<li class="cr">
+								<span class="kind">45HC</span>
+								<span class="price">{{cost45hc}}</span>
+							</li>
+						</ul>
+					</dd>
+				</dl>
+				<dl class="msg block" style="margin-top: 0;">
+					<dd class="clearfix cb">
+						<img src="img/icon6.png" alt="icon6" class="fl"/>
+						<span class="name fl" localeString='field8'>有效期</span>
+						<span class="val fr">{{expireDate}}</span>
+					</dd>
+				</dl>
+				<dl class="append block" id="append">
+					<dt>
+						<i class="s"></i>
+						<em localeString='field10'>附加费</em>
+						<i class="l"></i>
+					</dt>
+					<!--<dd class="clearfix">
+						<span class="name fl" localeString='field11'>订舱费</span>
+						<span class="val fr">￥170/350</span>
+					</dd>
+					<dd class="clearfix">
+						<span class="name fl">HTC</span>
+						<span class="val fr">￥170/350</span>
+					</dd>
+					<dd class="clearfix">
+						<span class="name fl">CIC</span>
+						<span class="val fr">￥170/350</span>
+					</dd>
+					<dd class="clearfix">
+						<span class="name fl">EBS</span>
+						<span class="val fr">￥170/350</span>
+					</dd>
+					<dd class="clearfix">
+						<span class="name fl">DOC</span>
+						<span class="val fr">￥170/350</span>
+					</dd>
+					<dd class="clearfix cb">
+						<span class="name fl">CAF</span>
+						<span class="val fr">￥170/350</span>
+					</dd>                    -->
+				</dl>
+			</section>
+			<footer>
+				<div localeString='field13' id="btn">详细询价</div>
+				<span><span localeString='field15'>询价热线：</span><span id="tel">400-8888-888</span></span>
+			</footer>
+		</div>
+	</body>
+	<script src="../libs/zepto.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../libs/main.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../libs/cookie.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/resource.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../libs/setLanguage.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/common.js" type="text/javascript" charset="utf-8"></script>
+	
+</html>

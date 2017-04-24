@@ -1,0 +1,55 @@
+window.onload=function(){
+	getPorts(getCookie('accessToken'));
+	if(getCookie('refreshToken')==''){
+		open("../35login/35.html")
+	}else if(getCookie('accessToken')==''){
+		var t=new Date().getTime();
+		$.ajax({
+			type:'POST',
+			async:false,
+			url:'http://106.14.251.28:8081/userCenter/user/refreshToken',
+			data:{
+				'refreshToken':getCookie('refreshToken'),
+				'accessToken':getCookie('accessToken2'),
+				'msgId':t+''
+			},
+			success:function(json){
+				if(json.retCode==0000){
+					alert('refresh成功')
+					setCookie('accessToken',json.accessToken,7);
+					setCookie('accessToken2',json.accessToken,28);
+					setCookie('refreshToken',json.refreshToken,28);
+					open("../02interface/interface.html");
+				}else{
+					alert('登录过期！')
+					open("../35login/35.html")
+				}
+			},
+		});
+	}else{
+		var t=new Date().getTime();
+		$.ajax({
+			type:'POST',
+			async:false,
+			url:'http://106.14.251.28:8081/userCenter/user/refreshToken',
+			data:{
+				'refreshToken':getCookie('refreshToken'),
+				'accessToken':getCookie('accessToken'),
+				'msgId':t+''
+			},
+			success:function(json){
+				if(json.retCode==0000){
+					alert('refresh成功')
+					setCookie('accessToken',json.accessToken,7);
+					setCookie('accessToken2',json.accessToken,28);
+					setCookie('refreshToken',json.refreshToken,28);
+					open("../02interface/interface.html");
+				}else{
+					console.log(json)
+					alert('登录超时！')
+					open("../35login/35.html")
+				}
+			},
+		});
+	}
+};

@@ -1,0 +1,22 @@
+$('#change').click(function(){
+	var t=new Date().getTime();
+	$.ajax({
+		type:'POST',
+		async:false,
+		url:'http://120.26.95.49:8081/userCenter/userService/updatePwd',
+		data:{
+			'password':'123456',
+			'oldPwd':'123456',
+			'accessToken':getCookie('accessToken2'),
+			'msgId':t+''
+		},
+		success:function(json){
+			if(json.retCode==0000){
+				alert('成功')
+			}else{
+				alert('修改失败')
+				console.log(json)
+			}
+		},
+	});
+});

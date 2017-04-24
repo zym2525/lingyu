@@ -1,0 +1,218 @@
+html{
+	height: 100%;
+	font-size: 100px;
+}
+body{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	-webkit-user-select: none;
+}
+.wrap{
+	width: 7.5rem;
+	margin: 0 auto;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+header{
+	height: 0.9rem;
+	padding-top: 0.38rem;
+	background-color: #097b47;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+header img:first-child{
+	height: 0.36rem;
+	padding-top: 0.2rem;
+	padding-bottom: 0.2rem;
+	padding-right: 0.3rem;
+	position: absolute;
+	left: 0.2rem;
+	top: 0.45rem;
+}
+header .sort{
+	width: 0.46rem;
+	padding-top: 0.2rem;
+	padding-left: 0.2rem;
+	padding-bottom: 0.1rem;
+	position: absolute;
+	right: 0.2rem;
+	bottom: 0.16rem;
+}
+header h2{
+	font-size: 0.34rem;
+	color: #fff;
+}
+header .list{
+	width: 2.41rem;
+	height: 2.76rem;
+	position: absolute;
+	right: 0.1rem;
+	bottom: -2.6rem;
+	background: url(../../img/list-bg.png) no-repeat;
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	display: none;
+	z-index: 111;
+}
+header .list.show{
+	display: block;
+}
+header .list li{
+	text-align: center;
+	line-height: 0.7rem;
+	font-size: 0.28rem;
+	color: #333;
+}
+header .list li:first-child{
+	margin-top: 0.32rem;
+}
+.content{
+	background-color: #f3f5f7;
+	flex: 1;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+	padding-bottom: 0.3rem;
+}
+#tpl{
+	display: none;
+}
+.content .container{
+	width: 7.1rem;
+	height: 5.11rem;
+	border-top: 3px solid #1eb389;
+	background-color: #FFFFFF;
+	border-radius: 0.03rem;
+	margin: 0.3rem auto 0;
+	font-size: 0.26rem;
+	color:#a1a1a1 ;
+}
+.content .container ul{
+	background: url(../../img/line.png) repeat-x bottom;
+}
+.content .container .cback{
+	background:none;
+}
+.content .container .top{
+	display: flex;
+	height: 0.93rem;
+}
+.content .container .top li{
+	flex: 1;
+	font-size: 0.3rem;
+	display: flex;
+	align-items: center;
+}
+.content .container .top li .icon1{
+	display: block;
+	width: 0.35rem;
+	height: 0.37rem;
+	background: url(../../img/ship.png) no-repeat center;
+	background-size: cover;
+	margin-left: 0.15rem;
+	margin-right: 0.24rem;
+}
+.content .container .top li .icon2{
+	display: block;
+	width: 0.34rem;
+	height: 0.34rem;
+	background: url(../../img/time.png) no-repeat center;
+	background-size: cover;
+	margin-left: 0.1rem;
+	margin-right: 0.16rem;
+}
+.content .container .top li span{
+	font-weight: bold;
+	color: #2e3f51;
+}
+.content .container .destination{
+	display: flex;
+}
+.content .container .destination .start_box,.content .container .destination .end_box{
+	width: 2.78rem;
+	height: 0.88rem;
+	padding: 0.61rem 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	margin-left: 0.18rem;
+}
+.content .container .destination .end_box{
+	margin-left:0;
+	margin-right: 0.18rem;
+}
+.content .container .destination .start_box .start,.content .container .destination .end_box .end{
+	display: flex;
+	justify-content: center;
+	font-size: 0.28rem;
+	line-height: 0.28rem;
+}
+.content .container .destination .start_box .start img,.content .container .destination .end_box .end img{
+	width: 0.26rem;
+	height: 0.26rem;
+	margin-right: 0.16rem;
+}
+.content .container .destination .start_box .name,.content .container .destination .end_box .name{
+	font-size:0.28rem;
+	color: #2e3f51;
+	font-weight: bold;
+	text-align: center;
+}
+.content .container .destination .icon{
+	width: 1.46rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.content .container .destination .icon img:first-child{
+	width: 0.44rem;
+	height: 0.47rem;
+	margin-bottom: 0.14rem;
+}
+.content .container .destination .icon img:last-child{
+	width: 1.46rem;
+	height: 0.11rem;
+}
+.content .container .time{
+	display: flex;
+	height: 0.74rem;
+	justify-content: space-around;
+	align-items: center;
+}
+.content .container .time li{
+	display: flex;
+}
+.content .container .time li div{
+	font-size: 0.26rem;
+}
+.content .container .time li span{
+	color: #2e3f51;
+	font-size: 0.26rem;
+}
+.content .container .price{
+	height: 0.79rem;
+	display: flex;
+	padding: 0.28rem 0;
+}
+.content .container .price li{
+	flex: 1;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.content .container .price li span{
+	font-size: 0.24rem;
+	color: #666;
+}
+.content .container .price li .number{
+	font-size: 0.32rem;
+	color: #1eb389;
+}

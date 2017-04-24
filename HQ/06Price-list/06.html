@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../libs/base.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	</head>
+	<body style="visibility: hidden;">
+		<div class="wrap">
+			<header>
+				<img src="../img/arrow2.png" alt="arrow" class="arrow"/>
+				<h2 localeString='title'>运价列表</h2>
+				<img src="../img/sort.png" alt="sort" class="sort" id="sort"/>
+				<ul class="list" id="list">
+					<li id="cost20gp" localeString='list1'>价格优先</li>
+					<li id="sailingDay" localeString='list2'>航程优先</li>
+					<li id="customsClearance" localeString='list3'>截关日期优先</li>
+				</ul>
+			</header>
+			<section class="content" id="content">
+				
+			</section>
+			<section class="container" id="tpl">
+					<ul class="top">
+						<li>
+							<i class="icon1"></i>
+							<div class="ship" localeString='field1'>船公司：</div>
+							<span>{{carryCode}}</span>
+						</li>
+						<li>
+							<i class="icon2"></i>
+							<div localeString='field2'>有效期：</div>
+							<span>{{expireDate}}</span>
+						</li>
+					</ul>
+					<ul class="destination">
+						<li class="start_box">
+							<div class="start">
+								<img src="../img/start.png" alt="start"/>
+								<span localeString='field3'>起运港</span>
+							</div>
+							<div class="name">{{polName}}</div>
+						</li>
+						<li class="icon">
+							<img src="../img/ship_main.png" alt="ship_main"/>
+							<img src="../img/arrow.png" alt="arrow"/>
+						</li>
+						<li class="end_box">
+							<div class="end">
+								<img src="../img/finish.png" alt="finish"/>
+								<span localeString='field4'>目的港</span>
+							</div>
+							<div class="name">{{podName}}</div>
+						</li>
+					</ul>
+					<ul class="time">
+						<li>
+							<div localeString='field5'>船程：</div>
+							<span>{{sailingDay}}</span>
+						</li>
+						<li>
+							<div localeString='field6'>开船：</div>
+							<span>{{etd}}</span>
+						</li>
+						<li>
+							<div localeString='field7'>截关：</div>
+							<span>{{customsClearance}}</span>
+						</li>
+					</ul>
+					<ul class="price cback">
+						<li>
+							<span>20GP</span>
+							<span class="number">{{cost20gp}}</span>
+						</li>
+						<li>
+							<span>40GP</span>
+							<span class="number">{{cost40gp}}</span>
+						</li>
+						<li>
+							<span>40HQ</span>
+							<span class="number">{{cost40hq}}</span>
+						</li>
+						<li>
+							<span>45HC</span>
+							<span class="number">{{cost45hc}}</span>
+						</li>
+					</ul>
+				</section>
+		</div>
+		<script src="../libs/zepto.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../libs/main.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../libs/cookie.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/resource.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/getSchemes.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/getMsg.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/list.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../libs/setLanguage.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

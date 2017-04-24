@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+   		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="../libs/iosSelect.css"/>
+		<!--<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />-->
+	</head>
+		
+	<body style="visibility: hidden;">
+		<div id="shadow">
+			<div id="hint">
+				<input type="text" placeholder="请在此输入" id="text2"/>
+				<div class="cancel" id="cancel1" localeString='cancel'>取消</div>
+				<div class="confirm" id="confirm1" localeString='complete'>确定</div>
+			</div>
+		</div>
+		<div id="shadow1">
+			<div id="hint2">
+				<h2 id="text3">确认取消</h2>
+				<div class="cancel" id="cancel2">取消</div>
+				<div class="confirm" id="confirm2">确定</div>
+			</div>
+		</div>
+		<div id="shadow2">
+			<div id="hint3">
+				<h2 id="text4" localeString='changeP'>确认要修改密码？</h2>
+				<div class="cancel" id="cancel3" localeString='cancel'>取消</div>
+				<div class="confirm" id="confirm3" localeString='complete'>确定</div>
+			</div>
+		</div>
+		<div id="hintBox">询价成功！</div>
+		<div class="wrap">
+			<div class="header" style="display: block;">
+				<header>
+					<!--<img src="../img/arrow2.png" alt="arrow" class="comeback"/>-->
+					<h2><span localeString='title1'>报价系统</span></h2>
+				</header>
+			</div>
+			<div class="header">
+				<header class="header2">
+					<img src="../img/shuaxin.png" alt="shuaxin" class="shuaxin1"/>
+					<h2 localeString='title2'>运价列表</h2>
+					<img src="../img/search.png" alt="search" class="search" id="enquirySearch"/>
+				</header>
+				<ul class="nav1">
+					<li class="active" >
+						<span localeString='current_inquiry'>未报价</span>
+						(<span class="n">0</span>)
+					</li>
+					<li id="btn2">
+						<span localeString='Completed'>已报价</span>
+						(<span class="n">0</span>)
+					</li>
+					<li id="btn3">
+						<span localeString='canceled'>已过期</span>
+						(<span class="n">0</span>)
+					</li>
+				</ul>
+			</div>
+			<div class="header">
+				<header class="header4">
+					<!--<img src="../img/arrow2.png" alt="arrow" />-->
+					<h2 localeString='title4'>我的账户</h2>
+					<img src="../img/save.png" alt="save" class="save" id="save"/>
+				</header>
+			</div>
+			<section class="enterances enterances1">
+				<section class="content">
+					<section class="port">
+						<div class="start_box selector" id="start_box">
+							<span localeString='start'>起运港</span>
+							<div class="name">
+								<em id="pol" code='CNNGB'>NINGBO</em>
+								<i></i>
+							</div>
+						</div>
+						<h2 class="exchange" id="exchange"></h2>
+						<div class="end_box" id="end_box">
+							<span localeString='end'>目的港</span>
+							<div class="name">
+								<em id="pod" code='AEDUB'>DUBAI</em>
+								<i></i>
+							</div>
+						</div>
+					</section>
+					<section class="port ship_company selector" id="carrys">
+						<div class="box">
+							<span localeString='company' id="companyBox">选择船公司</span>
+							<div class="name">
+								<em id="carrysName" code='0'></em>
+							</div>
+						</div>
+						<i></i>
+					</section>
+					<section class="btn_box">
+						<a class="btn1" localeString='search'>搜索</a>
+					</section>
+				</section>
+				</section>
+			<section class="enterances enterances2">
+					<section class="content" style="display: block;">
+						<section class="enquiry" id="enquiry1">
+							
+						</section>	
+					</section>
+					<section class="content" >
+						<section class="enquiry" id="enquiry2"></section>
+					</section>
+					<section class="content">
+						<section class="enquiry" id="enquiry3"></section>
+					</section>
+				</section>
+				<section class="container bReady" id="tpl">
+								<i class="bCompete"></i>
+								<!--<i class="cancel" localeString='cancel'>取消</i>-->
+								<ul class="top">
+									<li>
+										<i class="icon1"></i>
+										<div class="name" localeString='Inquiry_time'>询价时间：</div>
+										<span>{{enquiryTime}}</span>
+									</li>
+								</ul>
+								<ul class="destination">
+									<li class="start_box">
+										<div class="start">
+											<img src="../img/start.png" alt="start"/>
+											<span localeString='start'>起运港</span>
+										</div>
+										<div class="name">{{polName}}</div>
+									</li>
+									<li class="icon">
+										<img src="../img/ship_main.png" alt="ship_main"/>
+										<img src="../img/arrow.png" alt="arrow"/>
+									</li>
+									<li class="end_box">
+										<div class="end">
+											<img src="../img/finish.png" alt="finish"/>
+											<span localeString='end'>目的港</span>
+										</div>
+										<div class="name">{{podName}}</div>
+									</li>
+								</ul>
+								<ul class="time">
+									<li class="ft">
+										<div class="name" localeString='delivery_time'>预计出货时间：</div>
+										<span>{{expectTime}}</span>
+									</li>
+									<li>
+										<div class="name" localeString='company2'>船公司：</div>
+										<span class="carryName">全部</span>
+									</li>
+									<li class="ct">
+										<div class="箱型箱量" localeString='Box_type_Num'>箱型箱量：</div>
+										<span class='num'>{{num20gp}}<b></b>{{num40gp}}<b></b>{{num40hq}}<b></b>{{num45hc}}</span>
+									</li>
+								</ul>
+								<ul class="remark">
+									<li>
+										<div class="name" localeString='remark'>备     注：</div>
+										<span class="remarkBox"></span>
+									</li>
+								</ul>
+							</section>
+			<section class="enterances enterances4" id="enterances4">
+				<section class="content">
+					<div class="msg">
+						<i class="portrait"></i>
+						<div class="box">
+							<div class="name" id="userName"></div>
+							<div class="phone" id="mobileNo"></div>
+						</div>
+					</div>
+					<div>
+						<div class="company block">
+							<div class="icon">
+								<img src="../img/company.png" alt="company"/>
+							</div>
+							<div class="cell">
+								<div class="l" localeString='Enterprise_name'>企业名称</div>
+								<div class="r">
+									<span id="companyName"></span>
+								</div>
+							</div>
+						</div>
+						<div class="mailbox block">
+							<div class="icon">
+								<img src="../img/email.png" alt="email"/>
+							</div>
+							<div class="cell cb">
+								<div class="l" localeString='email'>邮箱</div>
+								<div class="r">
+									<span id="email"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="language block">
+							<div class="icon">
+								<img src="../img/language.png" alt="language"/>
+							</div>
+							<div class="cell" id='language_box'>
+								<div class="l" localeString='language'>语言选择</div>
+								<div class="r">
+									<span localeString='language_name'>中文</span>
+									<i class="right"></i>
+								</div>
+							</div>
+						</div>
+						<div class="mima block">
+							<div class="icon">
+								<img src="../img/mima.png" alt="mima"/>
+							</div>
+							<div class="cell cb" id="change">
+								<div class="l" localeString='change_password'>修改密码</div>
+								<div class="r">
+									<i class="right"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--<a class="exit" id='exit' localeString='exit'>退出</a>-->
+					<div class="exit" id='exit' localeString='exit'>退出</div>
+				</section>
+			</section>
+			<footer>
+				<div class="active">
+					<i class="icon1"></i>
+					<span localeString='Freight query'>运价查询</span>
+				</div>
+				<div id="btnEnquirys">
+					<i class="icon2"></i>
+					<span localeString='Inquiry management'>询盘管理</span>
+				</div>
+				<div>
+					<i class="icon4"></i>
+					<span localeString='account'>我的账户</span>
+				</div>
+			</footer>
+		</div>
+	</body>	
+		<script src="../libs/zepto.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../libs/main.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../libs/cookie.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/getEnquirys.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/resource.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/common.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/getMsg.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../libs/setLanguage.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/tab.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../libs/adaptive.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../libs/iosSelect.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/select.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$('.btn1').on('touchstart',function(){
+				open('../06Price-list/06.html?'+$('#pol').attr('code')+'&'+$('#pod').attr('code')+'&'+$('#carrysName').attr('code'))
+				return false;
+			});
+			$('#enquirySearch').on('touchstart',function(){
+				sessionStorage.setItem('currentData',JSON.stringify(currentData));
+				sessionStorage.setItem('currentScrollT',JSON.stringify(currentScrollT));
+				open('../12Inquiry-management-search/12.html');
+				return false;
+			});
+		</script>
+</html>

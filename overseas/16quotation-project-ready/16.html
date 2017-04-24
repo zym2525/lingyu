@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	</head>
+	<body style="visibility: hidden;">
+		<div id="shadow">
+			<div id="hint">
+				<h2 localeString='fa'>确认该方案吗？</h2>
+				<div class="cancel" id="cancel" localeString='cancel'>取消</div>
+				<div class="confirm" id="confirm" localeString='confirm2'>确定</div>
+			</div>
+		</div>
+		<div id="hintBox">确认方案成功！</div>
+		<section class="updateFee updateFee1">
+			<header>
+				<img src="img/arrow2.png" alt="arrow" class="comb"/>
+				<h2></h2>
+			</header>
+			<section class="content">
+				<ul>
+					<li class="box customer">
+						<div class="title">
+							<i class="s"></i>
+							<span>20GP</span>
+						</div>
+						<div class="container">
+							<div class="l focus">
+								<input type="number" value="" id="ipt1"/>
+								<span localeString='feess'>请输入修改费用</span>
+							</div>
+						</div>
+					</li>
+					<li class="box customer">
+						<div class="title">
+							<i class="s"></i>
+							<span>40GP</span>
+						</div>
+						<div class="container">
+							<div class="l focus">
+								<input type="number" value="" id='ipt2'/>
+								<span localeString='feess'>请输入修改费用</span>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</section>
+			<footer>
+				<a id="updateFeeBtn1" localeString='confirm'>确认修改</a>
+			</footer>
+		</section>
+			<section class="updateFee updateFee2">
+				<header>
+					<img src="img/arrow2.png" alt="arrow" class="comb"/>
+					<h2></h2>
+				</header>
+				<section class="content">
+					<ul>
+						<li class="box customer">
+							<div class="title">
+								<i class="s"></i>
+								<span>orderPrice</span>
+							</div>
+							<div class="container">
+								<div class="l focus">
+									<input type="number" value="" id="ipt4"/>
+									<span localeString='feess'>请输入修改费用</span>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</section>
+				<footer>
+					<a id="updateFeeBtn2" localeString='confirm'>确认修改</a>
+				</footer>
+			</section>
+		<div class="wrap">
+			<header>
+				<img src="img/arrow2.png" alt="arrow" class="arrow"/>
+				<h2 localeString='title'>物流方案（已确认报价）</h2>
+				<img src="img/shuaxin.png" alt="shuaxin" class="shuaxin"/>
+			</header>
+			<section class="content">
+				<section class="order container">
+					<ul>
+						<li class="msg">
+							<span class="name" localeString='field1'>询价编号</span>
+							<span class="val" id="enquiryCode">{{enquiryCode}}</span>
+						</li>
+						<li class="msg">
+							<span class="name" localeString='field2'>物流方案编号</span>
+							<span class="val">{{schemeCode}}</span>
+						</li>
+						<li class="msg">
+							<span class="name" localeString='field3'>回复时间</span>
+							<span class="val">{{replyTime}}</span>
+						</li>
+						<li class="msg">
+							<span class="name" localeString='field9'>回复人</span>
+							<span class="val">{{replyName}}</span>
+						</li>
+						<li class="msg">
+							<span class="name" localeString='field10'>电话</span>
+							<span class="val" id="mobileNo">{{replyMobileNo}}</span>
+						</li>
+					</ul>
+				</section>
+				<section class="case container">
+					<!--<ul class="top">
+						<li class="active ft">方案1</li>
+						<li>方案2</li>
+						<li>方案3</li>
+						<li>方案4</li>
+						<li>方案5</li>
+					</ul>-->
+					<div class="top" localeString='field11'>物流方案</div>
+					<!--<dl class="top2 block">
+						<dt>
+							<i class="s"></i>
+							<b localeString='Have_booking'>已订舱</b>
+							<i class="l"></i>
+							<div>
+								<span id="quantity">6</span>
+								<span localeString='ticket'>票</span>
+							</div>
+						</dt>
+					</dl>-->
+					<ul class="destination">
+						<li class="start_box">
+							<div class="start">
+								<img src="img/start.png" alt="start"/>
+								<span localeString='field12'>起运港</span>
+							</div>
+							<div class="name">{{polName}}</div>
+						</li>
+						<li class="icon">
+							<img src="img/ship_main.png" alt="ship_main"/>
+							<img src="img/arrow.png" alt="arrow"/>
+						</li>
+						<li class="end_box">
+							<div class="end">
+								<img src="img/finish.png" alt="finish"/>
+								<span localeString='field13'>目的港</span>
+							</div>
+							<div class="name">{{podName}}</div>
+						</li>
+					</ul>
+					<dl class="msg block">
+						<dt>
+							<i class="s"></i>
+							<b localeString='field22'>船期信息</b>
+							<i class="l"></i>
+						</dt>
+						<dd class="clearfix">
+							<img src="img/icon1.png" alt="icon1" class="fl"/>
+							<span class="name fl" localeString='field14'>船公司</span>
+							<span class="val fr">{{carryCode}}</span>
+						</dd>
+						<dd class="clearfix">
+							<img src="img/icon2.png" alt="icon2" class="fl"/>
+							<span class="name fl" localeString='field4'>中转港</span>
+							<span class="val fr">{{potName}}</span>
+						</dd>
+						<dd class="clearfix">
+							<img src="img/icon3.png" alt="icon3" class="fl"/>
+							<span class="name fl" localeString='field5'>船程</span>
+							<span class="val fr">{{sailingDay}}</span>
+						</dd>
+						<dd class="clearfix">
+							<img src="img/icon4.png" alt="icon4" class="fl"/>
+							<span class="name fl" localeString='field6'>开船</span>
+							<span class="val fr">{{etd}}</span>
+						</dd>
+						<dd class="clearfix cb">
+							<img src="img/icon5.png" alt="icon5" class="fl"/>
+							<span class="name fl" localeString='field7'>截关</span>
+							<span class="val fr">{{customsClearance}}</span>
+						</dd>
+					</dl>
+				</section>
+				<section class="price container">
+					<dl class="freight block">
+						<dt>
+							<i class="s"></i>
+							<b localeString='field15'>运费</b>
+							<span id="unit">(单位：美元)</span>
+							<i class="l"></i>
+						</dt>
+						<dd class="cb">
+							<ul id="hyf">
+								<li id='tplLi'>
+									<span class="kind">20GP</span>
+									<div class="bj">
+										<em class="units">$</em>
+										<input type="number"/>
+									</div>
+									
+								</li>
+							</ul>
+						</dd>
+					</dl>
+					<dl class="msg block">
+						<dd class="clearfix cb">
+							<img src="img/icon6.png" alt="icon6" class="fl"/>
+							<span class="name fl" localeString='field8'>有效期</span>
+							<span class="val fr">{{expireDate}}</span>
+						</dd>
+					</dl>
+				</section>
+				<section class="container">
+					<dl class="append block" id="append">
+						<dt>
+							<i class="s"></i>
+							<b localeString='field16'>附加费</b>
+							<i class="l"></i>
+						</dt>
+					</dl>
+				</section>
+				<section class="container">
+					<dl class="total block">
+						<dt>
+							<i class="s"></i>
+								TOTAL
+							<i class="l"></i>
+						</dt>
+						<!--<dd class="clearfix">
+							<span class="name fl" localeString='field18'>成本</span>
+							<span class="val fr"><em>$</em>4500<b></b><em>￥</em>5500</span>
+						</dd>-->
+						<dd class="clearfix cb">
+							<span class="name fl" localeString='field19'>报价</span>
+							<span class="val fr" id="allQuoteTotal"></span>
+						</dd>
+						<!--<dd class="clearfix cb profit">
+							<span class="name fl" localeString='field24'>利润</span><b></b><em>$</em><span>4600</span><b></b><em>￥</em><span>5700</span>
+							<span class="val fr"><em>$</em>100<b></b><em>￥</em>200</span>
+						</dd>-->
+					</dl>
+				</section>
+			</section>
+			<footer>
+				<a localeString='field21' id="btn" localeString='confirm'>确认报价</a>
+			</footer>
+		</div>
+	</body>
+	<script src="../libs/zepto.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../libs/main.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../libs/cookie.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/resource.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../libs/setLanguage.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/getSchemeInfo.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/getMsg.js" type="text/javascript" charset="utf-8"></script>
+</html>

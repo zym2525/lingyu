@@ -1,0 +1,167 @@
+html{
+	height: 100%;
+	font-size: 100px;
+}
+body{
+	height: 100%;
+	overflow: hidden;
+	-webkit-user-select: none;
+}
+.wrap{
+	width: 7.5rem;
+	margin: 0 auto;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+header{
+	height: 0.9rem;
+	padding-top: 0.38rem;
+	background-color: #097b47;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+header img:first-child{
+	height: 0.36rem;
+	position: absolute;
+	left: 0.2rem;
+	top: 0.65rem;
+}
+header .search{
+	width: 0.4rem;
+	position: absolute;
+	right: 0.2rem;
+	bottom: 0.26rem;
+}
+header h2{
+	font-size: 0.34rem;
+	color: #fff;
+}
+.content{
+	background-color: #f3f5f7;
+	flex: 1;
+	overflow: scroll;
+}
+.nav{
+	display: flex;
+	background: #fff;
+}
+.nav li{
+	flex: 1;
+	height: 0.8rem;
+	line-height: 0.8rem;
+	color: #999;
+	font-size: 0.28rem;
+	display: flex;
+	justify-content: center;
+	box-sizing: border-box;
+}
+.nav li.active{
+	color: #097b47;
+	border-bottom: 1px solid #097b47;
+}
+.order_cell{
+	width: 7.1rem;
+	margin: 0.3rem auto 0;
+	border-radius: 0.06rem;
+	box-shadow: 0 0 0.02rem rgba(9,123,71,0.18);
+	background-color: #fff;
+}
+.order_cell .title{
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	font-size: 0.3rem;
+	height: 0.94rem;
+	position: relative;
+}
+.order_cell .title:after{
+	content: '';
+	position: absolute;
+	width: 7.1rem;
+	height: 1px;
+	background: url(../img/line.png) repeat-x;
+	bottom: -1px;
+	left: 0;
+}
+.order_cell .title i{
+	display: block;
+	width: 0.32rem;
+	height: 0.34rem;
+	background-image: url(../img/icon.png);
+	background-size: cover;
+	margin: 0 0.2rem;
+}
+.order_cell .title .name{
+	color: #787878;
+}
+.order_cell .title .val{
+	color: #2E3F51;
+}
+.order_cell .order{
+	height: 1.05rem;
+	display: flex;
+	margin-top: 0.35rem;
+}
+.order_cell .order li{
+	flex: 1;
+	height: 0.78rem;
+	border-right: 1px solid #dcdcdc;
+	display: flex;
+	flex-direction: column;
+}
+.order_cell .order li.cb{
+	border-right:none;
+	position: relative;
+}
+.order_cell .order li span{
+	margin-left: 0.18rem;
+}
+.order_cell .order li .value{
+	font-size: 0.28rem;
+	color: #1EB389;
+	margin-bottom: 0.24rem;
+}
+.order_cell .order li .name{
+	font-size: 0.24rem;
+	color: #999;
+}
+.order_cell .order li i{
+	position: absolute;
+	width: 0.14rem;
+	height: 0.24rem;
+	background-image: url(../img/arrow3.png);
+	background-size: cover;
+	bottom: 0.04rem;
+	right: 0.2rem;
+}
+footer{
+	height: 0.98rem;
+	display: flex;
+	justify-content: space-around;
+}
+footer div{
+	font-size: 0.22rem;
+	color: #999;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 0.13rem;
+}
+footer div.active{
+	font-size: 0.2rem;
+	color: #333;
+}
+footer div i{
+	display: block;
+	width: 0.33rem;
+	height: 0.46rem;
+	background-image:url(../img/icon3_0.png);
+	background-size: cover;
+	margin-bottom: 0.08rem;
+}
+footer div.active i{
+	background-image:url(../img/icon3.png);
+}

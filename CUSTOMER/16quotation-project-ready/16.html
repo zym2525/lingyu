@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../libs/base.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	</head>
+	<body style="visibility: hidden;">
+		<div class="wrap">
+			<header>
+				<img src="img/arrow2.png" alt="arrow" class="arrow"/>
+				<h2 localeString='title'>物流方案（已确认报价）</h2>
+			</header>
+			<section class="content">
+				<section class="order container">
+					<ul>
+						<li class="msg">
+							<span class="name" localeString='field1'>询价编号</span>
+							<span class="val" id="enquiryCode">{{enquiryCode}}</span>
+						</li>
+						<li class="msg">
+							<span class="name" localeString='field2'>物流方案编号</span>
+							<span class="val">{{schemeCode}}</span>
+						</li>
+						<li class="msg">
+							<span class="name" localeString='field3'>回复时间</span>
+							<span class="val">{{replyTime}}</span>
+						</li>
+						<li class="msg">
+							<span class="name" localeString='field9'>回复人</span>
+							<span class="val">{{replyName}}</span>
+						</li>
+						<li class="msg">
+							<span class="name" localeString='field10'>电话</span>
+							<span class="val">{{replyMobileNo}}</span>
+						</li>
+					</ul>
+				</section>
+				<section class="case container">
+					<ul class="top">
+						<i class="s"></i>
+						<span localeString='field24'>订单编号</span>
+						<i class="l"></i>
+						<p>{{orderCode}}</p>
+					</ul>
+					<ul class="destination">
+						<li class="start_box">
+							<div class="start">
+								<img src="img/start.png" alt="start"/>
+								<span localeString='field12'>起运港</span>
+							</div>
+							<div class="name">{{polName}}</div>
+						</li>
+						<li class="icon">
+							<img src="img/ship_main.png" alt="ship_main"/>
+							<img src="img/arrow.png" alt="arrow"/>
+						</li>
+						<li class="end_box">
+							<div class="end">
+								<img src="img/finish.png" alt="finish"/>
+								<span localeString='field13'>目的港</span>
+							</div>
+							<div class="name">{{podName}}</div>
+						</li>
+					</ul>
+					<dl class="msg block">
+						<dt>
+							<i class="s"></i>
+							<b localeString='field22' style="font-size: 0.28rem;">船期信息</b>
+							<i class="l"></i>
+						</dt>
+						<dd class="clearfix">
+							<img src="img/icon1.png" alt="icon1" class="fl"/>
+							<span class="name fl" localeString='field14'>船公司</span>
+							<span class="val fr">{{carryCode}}</span>
+						</dd>
+						<dd class="clearfix">
+							<img src="img/icon2.png" alt="icon2" class="fl"/>
+							<span class="name fl" localeString='field4'>中转港</span>
+							<span class="val fr">{{potName}}</span>
+						</dd>
+						<dd class="clearfix">
+							<img src="img/icon3.png" alt="icon3" class="fl"/>
+							<span class="name fl" localeString='field5'>船程</span>
+							<span class="val fr">{{sailingDay}}</span>
+						</dd>
+						<dd class="clearfix">
+							<img src="img/icon4.png" alt="icon4" class="fl"/>
+							<span class="name fl" localeString='field6'>开船</span>
+							<span class="val fr">{{etd}}</span>
+						</dd>
+						<dd class="clearfix cb">
+							<img src="img/icon5.png" alt="icon5" class="fl"/>
+							<span class="name fl" localeString='field7'>截关</span>
+							<span class="val fr">{{customsClearance}}</span>
+						</dd>
+					</dl>
+				</section>
+				<section class="price container">
+					<dl class="freight block">
+						<dt>
+							<i class="s"></i>
+							<b localeString='field15' style="font-size: 0.28rem;">运费</b>
+							<span id="unit">(单位：美元)</span>
+							<i class="l"></i>
+						</dt>
+						<dd class="cb">
+							<ul id="hyf">
+								<li>
+									<span class="kind" id="k1">20GP</span>
+									<span class="price">{{cost20gp}}</span>
+								</li>
+								<li>
+									<span class="kind" id="k2">40GP</span>
+									<span class="price">{{cost40gp}}</span>
+								</li>
+								<li>
+									<span class="kind">40HQ</span>
+									<span class="price">{{cost40hq}}</span>
+								</li>
+								<li >
+									<span class="kind">45HC</span>
+									<span class="price">{{cost45hc}}</span>
+								</li>
+							</ul>
+						</dd>
+					</dl>
+					<dl class="msg block">
+						<dd class="clearfix cb">
+							<img src="img/icon6.png" alt="icon6" class="fl"/>
+							<span class="name fl" localeString='field8'>有效期</span>
+							<span class="val fr">{{expireDate}}</span>
+						</dd>
+					</dl>
+				</section>
+				<section class="container">
+					<dl class="append block" id="append">
+						<dt>
+							<i class="s"></i>
+							<b localeString='field16' style="font-size: 0.28rem;">附加费</b>
+							<i class="l"></i>
+						</dt>
+						<!--<dd class="clearfix">
+							<span class="name fl">订舱费</span>
+							<span class="val fr">￥170/350</span>
+						</dd>
+						<dd class="clearfix">
+							<span class="name fl">HTC</span>
+							<span class="val fr">￥170/350</span>
+						</dd>
+						<dd class="clearfix">
+							<span class="name fl">CIC</span>
+							<span class="val fr">￥170/350</span>
+						</dd>
+						<dd class="clearfix">
+							<span class="name fl">EBS</span>
+							<span class="val fr">￥170/350</span>
+						</dd>
+						<dd class="clearfix">
+							<span class="name fl">DOC</span>
+							<span class="val fr">￥170/350</span>
+						</dd>
+						<dd class="clearfix cb">
+							<span class="name fl">CAF</span>
+							<span class="val fr">￥170/350</span>
+						</dd>                    -->
+					</dl>
+				</section>
+				<section class="container">
+					<dl class="total block">
+						<dt>
+							<i class="s"></i>
+								TOTAL
+							<i class="l"></i>
+						</dt>
+						<!--<dd class="clearfix">
+							<span class="name fl" localeString='field18'>成本</span>
+							<span class="val fr"><em>$</em>4500<b></b><em>￥</em>5500</span>
+						</dd>-->
+						<dd class="clearfix cb">
+							<span class="name fl" localeString='field19'>报价</span>
+							<span class="val fr" id="val"></span>
+						</dd>
+						<!--<dd class="clearfix cb profit">
+							<span class="name fl" localeString='field24'>利润</span>
+							<span class="val fr"><em>$</em>100<b></b><em>￥</em>200</span>
+						</dd>-->
+					</dl>
+				</section>
+			</section>
+			<footer>
+				<a id="btn" localeString='field21'>查看物流状态</a>
+			</footer>
+		</div>
+		
+	</body>
+	<script src="../libs/zepto.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../libs/cookie.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../libs/main.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/resource.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../libs/setLanguage.js" type="text/javascript" charset="utf-8"></script>
+	<!--<script src="js/common.js" type="text/javascript" charset="utf-8"></script>-->
+	<script src="js/getSchemeInfo.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/getMsg.js" type="text/javascript" charset="utf-8"></script>
+</html>

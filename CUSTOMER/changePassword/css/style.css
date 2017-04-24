@@ -1,0 +1,145 @@
+html{
+	height: 100%;
+	font-size: 100px;
+}
+body{
+	height: 100%;
+	overflow: hidden;
+}
+.wrap{
+	width: 7.5rem;
+	height: 100%;
+	margin: 0 auto;
+}
+.header{
+	width: 7.5rem;
+}
+.content{
+	display: flex;
+	justify-content: center;
+}
+.content .logo{
+	position: absolute;
+	top: 3.3rem;
+	left: 50%;
+	margin-left: -1.01rem;
+}
+.content .logo img{
+	width: 2.02rem;
+}
+.content .form{
+	position: absolute;
+	top: 6rem;
+	left: 1.64rem;
+}
+.content .form div{
+	position: relative;
+	margin-bottom: 0.44rem;
+}
+.content .form .rePassword{
+	margin-bottom: 0.64rem;
+}
+.content .form .email #getCode{
+	width: 1.6rem;
+	height: 0.48rem;
+	font-size: 0.24rem;
+	color: #1EB389;
+	position: absolute;
+	line-height: 0.44rem;
+	text-align: center;
+	border: 1px solid #1eb389;
+	box-sizing: border-box;
+	right: 0.08rem;
+	bottom: 0.08rem;
+	border-radius: 0.22rem;
+}
+.content .form .email em{
+	height: 0.48rem;
+	line-height: 0.44rem;
+	position: absolute;
+	right: 0.08rem;
+	bottom: 0.08rem;
+	font-size: 0.24rem;
+	color: #1EB389;
+	display: none;
+}
+.content .form .email{
+	margin-bottom: 0.4rem;
+}
+.content .form div input{
+	width: 4.91rem;
+	height: 0.56rem;
+	font-size: 0.32rem;
+	line-height: 0.56rem;
+	border-bottom: 1px #e6e6e6 solid;
+	color: #7c7c7c;
+	box-sizing: border-box;
+}
+.content .form .cb{
+	margin-bottom:0;
+}
+.content .form div span{
+	font-size: 0.32rem;
+	line-height: 0.56rem;
+	color: rgba(153,153,153,0.7);
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.content .form div i{
+	width: 0.6rem;
+	height: 0.6rem;
+	background: url(../img/icon3.png) no-repeat;
+	background-size: cover;
+	position: absolute;
+	left: -0.78rem;
+	top: 0;
+}
+.content .form .rePassword i{
+	background: url(../img/icon2.png) no-repeat;
+	background-size: cover;
+}
+.content .form .email i{
+	background: url(../img/icon1.png) no-repeat;
+	background-size: cover;
+}
+.content .form .reCode i{
+	background: url(../img/icon4.png) no-repeat;
+	background-size: cover;
+}
+.content .form .submit{
+	display: block;
+	width: 5.6rem;
+	height: 0.9rem;
+	background-color: #097b47;
+	color: #fefefe;
+	text-align: center;
+	line-height: 0.9rem;
+	font-size: 0.36rem;
+	border-radius: 0.45rem;
+	margin-top: 0.64rem;
+	margin-left: -0.69rem;
+}
+#hint{
+	background-color: #323232;
+	height: 0.9rem;
+	font-size: 0.36rem;
+	color: #e4ede9;
+	line-height: 0.9rem;
+	text-align: center;
+	border-radius: 0.2rem;
+	padding: 0 0.4rem;
+	margin-top: -0.2rem;
+	display: none;
+}
+.footer{
+	width: 100%;
+	position: absolute;
+	bottom: 0.2rem;
+	left: 0;
+}
+.footer .hot{
+	font-size: 0.28rem;
+	color: rgba(153,153,153,0.8);
+	text-align: center;
+}

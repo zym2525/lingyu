@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../libs/base.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="../libs/iosSelect.css"/>
+	</head>
+	<body  style="visibility: hidden;">
+		<div class="wrap">
+			<div id="hintBox">询价成功！</div>
+			<header>
+				<img src="img/arrow2.png" alt="arrow" class="arrow"/>
+				<h2 localeString='title'>详细询价</h2>
+				
+			</header>
+			<section class="content">
+				<div class="topT">
+					<div class="bg">
+						<div class="line"></div>
+						<ul class="destination">
+							<div class="start_box">
+								<div class="start">
+									<img src="img/start.png" alt="start"/>
+									<span localeString='field1'>起运港</span>
+								</div>
+								<div class="name">{{polName}}</div>
+							</div>
+							<div class="icon">
+								<img src="img/ship_main.png" alt="ship_main"/>
+								<img src="img/arrow.png" alt="arrow"/>
+							</div>
+							<div class="end_box">
+								<div class="end">
+									<img src="img/finish.png" alt="finish"/>
+									<span localeString='field2'>目的港</span>
+								</div>
+								<div class="name">{{podName}}</div>
+							</div>
+						</ul>
+					</div>
+				</div>
+				<dl class="msg block">
+					<dt>
+						<i class="s"></i>
+						<em localeString='field14'>船期信息</em>
+						<i class="l"></i>
+					</dt>
+					<dd class="clearfix">
+						<img src="img/icon1.png" alt="icon1" class="fl"/>
+						<span class="name fl" localeString='field3'>船公司</span>
+						<span class="val fr">{{carryCode}}</span>
+					</dd>
+					<dd class="clearfix">
+						<img src="img/icon2.png" alt="icon2" class="fl"/>
+						<span class="name fl" localeString='field4'>中转港</span>
+						<span class="val fr">{{potName}}</span>
+					</dd>
+					<dd class="clearfix">
+						<img src="img/icon3.png" alt="icon3" class="fl"/>
+						<span class="name fl" localeString='field5'>船程</span>
+						<span class="val fr">{{sailingDay}}</span>
+					</dd>
+					<dd class="clearfix">
+						<img src="img/icon4.png" alt="icon4" class="fl"/>
+						<span class="name fl" localeString='field6'>开船</span>
+						<span class="val fr">{{etd}}</span>
+					</dd>
+					<dd class="clearfix">
+						<img src="img/icon5.png" alt="icon5" class="fl"/>
+						<span class="name fl" localeString='field7'>截关</span>
+						<span class="val fr">{{customsClearance}}</span>
+					</dd>
+					<dd class="clearfix cb">
+						<img src="img/icon6.png" alt="icon6" class="fl"/>
+						<span class="name fl" localeString='field8'>有效期</span>
+						<span class="val fr">{{expireDate}}</span>
+					</dd>
+				</dl>
+				<ul>
+					<li class="quantity">
+						<div class="title title1">
+							<i class="s"></i>
+							<em localeString='field9'>箱型箱量</em>
+						</div>
+						<div class="container">
+							<div class="cell">
+								<span class="name">20GP</span>
+								<input type="number" value="0" id="20GPNum"/>
+							</div>
+							<div class="cell">
+								<span class="name">40GP</span>
+								<input type="number" value="0" id="40GPNum"/>
+							</div>
+							<div class="cell">
+								<span class="name">40HQ</span>
+								<input type="number" value="0" id="40HQNum"/>
+							</div>
+							<div class="cell">
+								<span class="name">45HC</span>
+								<input type="number" value="0" id="45HCNum"/>
+							</div>
+						</div>
+					</li>
+					<li class="time_box">
+						<div class="title">
+							<i class="s"></i>
+							<em localeString='field10'>预计出货时间</em>
+						</div>
+						<div class="container">
+							<span class="name" localeString='field11'>选择时间</span>
+							<div class="time">
+								<em id="expectDate" class="time_selector">2017-01-30</em>
+								<i></i>
+							</div>
+						</div>
+					</li>
+					<li class="remarks cb">
+						<div class="title">
+							<i class="s"></i>
+							<em localeString='field12'>备注</em>
+						</div>
+						<div class="text_box" id="text_box"> 
+							<textarea id="remark"></textarea>
+							<span localeString='field17'>请准时发货！(不超过15字)</span>
+						</div>
+					</li>
+				</ul>
+			</section>
+			<footer>
+				<a localeString='field13' id="btn">询价</a>
+				<div class="hint">
+					<i></i>
+					<b>温馨提示：</b>
+					<span>询价后20分钟内您将收到最佳物流方案，方案将以短信、邮件或App推送的方式进行提醒</span>
+				</div>
+			</footer>
+		</div>
+	</body>	
+		<script src="../libs/zepto.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../libs/main.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/remarks.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../libs/cookie.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/resource.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../libs/setLanguage.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../libs/adaptive.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../libs/iosSelect.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/common.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/select.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/focus.js" type="text/javascript" charset="utf-8"></script>
+		
+	
+</html>

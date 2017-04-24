@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	</head>
+	<body>
+		<div class="wrap">
+			<header>
+				<img src="img/arrow2.png" alt="arrow" />
+				<h2><span localeString='title'>目的港</span></h2>
+			</header>
+			<section class="content">
+				<section class="port">
+					<div class="start_box" id="start_box">
+						<span localeString='start'>起运港</span>
+						<div class="name">
+							<em>NINGBO</em>
+							<i></i>
+						</div>
+					</div>
+					<h2 class="exchange" id="exchange"></h2>
+					<div class="end_box" id="end_box">
+						<span localeString='end'>目的港</span>
+						<div class="name">
+							<em>DUBAI</em>
+							<i></i>
+						</div>
+					</div>
+				</section>
+				<section class="port ship_company">
+					<div class="box">
+						<span localeString='company'>选择船公司</span>
+						<div class="name">
+							<em>MSK</em>
+						</div>
+					</div>
+					<i></i>
+				</section>
+				<section class="btn_box">
+					<a href="#javascript" class="btn1" localeString='search' id="btn">搜索</a>
+					<a href="#javascript" class="btn2" localeString='inquiry'>直接询价</a>
+					<span localeString='hot'>询价热线：400-8888-888</span>
+				</section>
+			</section>
+			<footer>
+				<div class="active">
+					<i class="icon1"></i>
+					<span localeString='Freight query'>运价查询</span>
+				</div>
+				<div>
+					<i class="icon2"></i>
+					<span localeString='Inquiry management'>询盘管理</span>
+				</div>
+				<div>
+					<i class="icon3"></i>
+					<span localeString='logistics'>全程跟踪</span>
+				</div>
+				<div>
+					<i class="icon4"></i>
+					<span localeString='account'>我的账户</span>
+				</div>
+			</footer>
+		</div>
+		<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery-1.12.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/common.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/cookie.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/resource.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/setLanguage.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+		function open(address){
+			var aA=document.createElement('a');
+			aA.setAttribute("href",address); 
+			var bodys=document.getElementsByTagName("body")[0]; 
+			bodys.appendChild(aA); 
+			aA.click();
+			bodys.removeChild(aA);
+		}
+			$('#btn').click(function(){
+				open('../04目的港-全部港口/04-1.html?user=111&password=3333');
+				return false
+			})
+		</script>
+	</body>
+</html>

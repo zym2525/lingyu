@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	</head>
+	<body  style="visibility: hidden;">
+		<div class="wrap">
+			<header>
+				<img src="img/arrow2.png" alt="arrow" class="arrow"/>
+				<h2 localeString='title'>订单详细</h2>
+			</header>
+			<section class="content">
+				<!--<dl class="block">
+					<dt>
+						<i class="s"></i>
+						<em localeString='personnel'>人员</em>
+						<i class="l"></i>
+					</dt>
+					<dd class="clearfix cb">
+						<span class="name fl" localeString='operator'>操作</span>
+						<span class="val fr">{{operAccountCode}}</span>
+					</dd>-->
+					<!--<dd class="clearfix cb">
+						<span class="name fl" localeString='seller'>销售</span>
+						<span class="val fr"></span>
+					</dd>-->
+				<!--</dl>-->
+				<dl class="msg block">
+					<dt>
+						<i class="s"></i>
+						<em localeString='information'>运单信息</em>
+						<i class="l"></i>
+					</dt>
+					<dd class="clearfix">
+						<span class="name fl">TIME <em>(订单时间)</em></span>
+						<span class="val fr" id="CTime"></span>
+					</dd>
+					<dd class="clearfix">
+						<span class="name fl">ORDERNO <em>(订单编号)</em></span>
+						<span class="val fr">{{orderCode}}</span>
+					</dd>
+					<dd class="clearfix">
+						<span class="name fl">NO. <em>(托单编码)</em></span>
+						<span class="val fr">{{bookingNo}}</span>
+					</dd>
+					<dd class="clearfix">
+						<span class="name fl">MB/L<em>(提单号)</em><em id="prepaid1"></em></span>
+						<span class="val fr">{{mbl}}</span>
+					</dd>
+					<dd class="clearfix">
+						<span class="name fl">HB/L<em>(提单号)</em><em id="prepaid2"></em></span>
+						<span class="val fr">{{hbl}}</span>
+					</dd>
+					<dd class="clearfix">
+						<span class="name fl">CUSTOMER <em>(客户)</em></span>
+						<span class="val fr">{{customCode}}</span>
+					</dd>
+					<dd class="clearfix">
+						<span class="name fl">POL<em>(起运港)</em></span>
+						<span class="val fr">{{polName}}</span>
+					</dd>
+					<dd class="clearfix">
+						<span class="name fl">POD<em>(目的港)</em></span>
+						<span class="val fr">{{podName}}</span>
+					</dd>
+					<dd class="clearfix">
+						<span class="name fl">POT<em>(中转港)</em></span>
+						<span class="val fr">{{potName}}</span>
+					</dd>
+					<dd class="clearfix">
+						<span class="name fl">OCEAN VESSEl <em>(船名)</em></span>
+						<span class="val fr">{{vessel}}</span>
+					</dd>
+					<dd class="clearfix cb">
+						<span class="name fl">VOYAGE NUMBER <em>(航次)</em></span>
+						<span class="val fr">{{voyage}}</span>
+					</dd>
+				</dl>
+				<dl class="block">
+					<dt>
+						<i class="s"></i>
+						<em localeString='Box'>箱型箱量</em>
+						<i class="l"></i>
+					</dt>
+					<dd class="clearfix cb quantity">
+						<div class="container">
+							<div class="cell">
+								<span class="name">20GP</span>
+								<input type="number" value="0" disabled id="num20GP"/>
+							</div>
+							<div class="cell">
+								<span class="name">40GP</span>
+								<input type="number" value="0" disabled id="num40GP"/>
+							</div>
+							<div class="cell">
+								<span class="name">40HQ</span>
+								<input type="number" value="0" disabled id="num40HQ"/>
+							</div>
+							<div class="cell">
+								<span class="name">45HC</span>
+								<input type="number" value="0" disabled id="num45HC"/>
+							</div>
+						</div>
+					</dd>
+				</dl>
+				<dl class="freight block">
+					<dt>
+						<i class="s"></i>
+						<em localeString='freight'>运费</em>
+						<span id="unit"></span>
+						<i class="l"></i>
+					</dt>
+					<dd>
+						<h2 localeString='cost'>成本</h2>
+						<ul class="cost1">
+							<li>
+								<span class="kind">20GP</span>
+								<span class="price">{{cost20gp}}</span>
+							</li>
+							<li>
+								<span class="kind">40GP</span>
+								<span class="price">{{cost40gp}}</span>
+							</li>
+							<li>
+								<span class="kind">40HQ</span>
+								<span class="price">{{cost40hq}}</span>
+							</li>
+							<li class="cr">
+								<span class="kind">45HC</span>
+								<span class="price">{{cost45hc}}</span>
+							</li>
+						</ul>
+					</dd>
+					<dd class="clearfix cb">
+						<h2 localeString='offer'>报价</h2>
+						<ul class="cost2">
+							<li>
+								<span class="kind">20GP</span>
+								<span class="price">{{cost20gp}}</span>
+							</li>
+							<li>
+								<span class="kind">40GP</span>
+								<span class="price">{{cost40gp}}</span>
+							</li>
+							<li>
+								<span class="kind">40HQ</span>
+								<span class="price">{{cost40hq}}</span>
+							</li>
+							<li class="cr">
+								<span class="kind">45HC</span>
+								<span class="price">{{cost45hc}}</span>
+							</li>
+						</ul>
+					</dd>
+				</dl>
+				<dl class="append block" id="append">
+					<dt>
+						<i class="s"></i>
+						<em localeString='Charges'>附加费</em>
+						<i class="l"></i>
+					</dt>
+					<!--<dd class="clearfix cb">
+						<span class="name fl">订舱费</span>
+						<span class="val fr">￥170*<em>1</em>+￥350*<em>1</em>=￥<em>520</em></span>
+					</dd>
+					<dd class="clearfix cb">
+						<span class="name fl">HTC</span>
+						<span class="val fr">￥170*<em>1</em>+￥350*<em>1</em>=￥<em>520</em></span>
+					</dd>
+					<dd class="clearfix">
+						<span class="name fl">CIC</span>
+						<span class="val fr">￥170*<em>1</em>+￥350*<em>1</em>=￥<em>520</em></span>
+					</dd>-->
+					<!--<dd class="clearfix cb">
+						<span class="name fl">TOTAL</span>
+						<span class="val fr green">￥<em>900</em>+￥<em>1800</em>=￥<em>2700</em></span>
+					</dd>-->
+				</dl>
+				<dl class="total block">
+					<dt>
+						<i class="s"></i>
+							ALL TOTAL
+						<i class="l"></i>
+					</dt>
+					<dd class="clearfix">
+						<span class="name fl" localeString='field18'>成本</span>
+						<span class="val fr" id="allCostTotal"></span>
+					</dd>
+					<dd class="clearfix">
+						<span class="name fl" localeString='field19'>报价</span>
+						<span class="val fr" id="allQuoteTotal"></span>
+					</dd>
+					<dd class="clearfix cb profit">
+						<span class="name fl" localeString='field20'>利润</span>
+						<span class="val fr" id="allProfitTotal"></span>
+					</dd>
+				</dl>
+				<dl class="block otherMsg">
+					<dt>
+						<i class="s"></i>
+						<em localeString='Other'>其他信息</em>
+					</dt>
+					<!--<dd class="clearfix pay" id="pay">
+						<span class="name fl"><i class="fl"></i><span class="fl">PREPAID</span><em class="fl">(运费预付)</em></span>
+						<span class="val fr"><i class="fl"></i><span class="fl">COLLECT</span><em class="fl">(运费到付)</em></span>
+					</dd>-->
+					<dd class="clearfix">
+						<span class="name fl" localeString='transport'>运输方式 </span>
+						<span class="val fr" id="transport"></span>
+					</dd>
+					<dd class="clearfix">
+						<span class="name fl">ETD <em>(开船日期)</em></span>
+						<span class="val fr">{{etd}}</span>
+					</dd>
+					<dd class="clearfix">
+						<span class="name fl">SHIPPER <em>(发货人)</em></span>
+						<span class="val fr" id="shipper"></span>
+					</dd>
+					<dd class="clearfix">
+						<span class="name fl">CONSIGNEE <em>(收货人)</em></span>
+						<span class="val fr">{{consignee}}</span>
+					</dd>
+					<dd class="clearfix">
+						<span class="name fl">NOTIFYPARTY <em>(通知人)</em></span>
+						<span class="val fr">{{notify}}</span>
+					</dd>
+					<dd class="clearfix">
+						<span class="name fl">MARK&NUMBERS <em>(唛头)</em></span>
+						<span class="val fr">{{mark}}</span>
+					</dd>
+					<!--<dd class="clearfix">
+						<span class="name fl">DESCRIPTION OF GPPDS <em>(中英文货名)</em></span>
+						<span class="val fr">DESIGNER</span>
+					</dd>-->
+					<dd class="clearfix">
+						<span class="name fl">NO.OF PACKAGE <em>(件数)</em></span>
+						<span class="val fr">{{package_}}</span>
+					</dd>
+					<dd class="clearfix">
+						<span class="name fl">GROSS WEIGHT/KG <em>(毛重)</em></span>
+						<span class="val fr">{{grossWeight}}</span>
+					</dd>
+					<dd class="clearfix">
+						<span class="name fl">DIMEINSIONS/CBM <em>(体积)</em></span>
+						<span class="val fr">{{volume}}</span>
+					</dd>
+					<dd class="clearfix cb">
+						<span class="name fl">NUMBER OF B/L <em>(提单份数)</em></span>
+						<span class="val fr">2</span>
+					</dd>
+					<!--<dd class="clearfix bill">
+						<div class="fr itemBox">
+							<div class="item">
+								<i>1</i>
+								<span>提单号(MB/L):</span>
+								<span id="prepaid1"></span>
+								<span class="num">{{mbl}}</span>
+							</div>
+							<div class="item">
+								<i>2</i>
+								<span>提单号(HB/L):</span>
+								<span id="prepaid2"></span>
+								<span class="num">WHL294847(少字段)</span>
+							</div>
+						</div>
+					</dd>-->
+					<dd class="clearfix">
+						<span class="name fl">TESTER <em>(联系人)</em></span>
+						<span class="val fr" id="tester"></span>
+					</dd>
+					<dd class="clearfix cb remark">
+						<span class="name fl">REMARK <em>(声明事项)</em></span>
+						<div class="text_box" id="text_box"> 
+							<textarea disabled>{{remark}}</textarea>
+							<span></span>
+						</div>
+					</dd>
+				</dl>
+			</section>
+			<footer>
+				<a id="btn">查看物流状态</a>
+			</footer>
+		</div>
+		<script src="../libs/zepto.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../libs/cookie.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../libs/main.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/resource.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/common.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../libs/setLanguage.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

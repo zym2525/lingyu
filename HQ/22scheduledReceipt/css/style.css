@@ -1,0 +1,135 @@
+html{
+	height: 100%;
+	font-size: 100px;
+}
+body{
+	height: 100%;
+	overflow: hidden;
+	-webkit-user-select: none;
+}
+.wrap{
+	width: 7.5rem;
+	margin: 0 auto;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+header{
+	height: 0.9rem;
+	padding-top: 0.38rem;
+	background-color: #097b47;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+header img{
+	height: 0.36rem;
+	padding-top: 0.2rem;
+	padding-bottom: 0.2rem;
+	padding-right: 0.3rem;
+	position: absolute;
+	left: 0.2rem;
+	top: 0.45rem;
+}
+header h2{
+	font-size: 0.34rem;
+	color: #fff;
+}
+.content{
+	flex: 1;
+	overflow: scroll;
+	background-color: #f3f5f7;
+}
+.nav{
+	padding: 0 0.2rem;
+}
+.nav .title,.nav .box{
+	height: 1rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background: url(../img/line1.png) repeat-x bottom;
+}
+.nav .cb{
+	background:none;
+}
+.nav .box{
+	height: 0.9rem;
+}
+.nav .l{
+	margin-left: 0.2rem;
+	display: flex;
+}
+.nav .l i{
+	display: block;
+	width: 0.31rem;
+	height: 0.4rem;
+	background-image: url(../img/icon.png);
+	background-size: cover;
+	margin-right: 0.2rem;
+}
+.nav .l span{
+	font-size: 0.3rem;
+	color: #787878;
+	line-height: 0.4rem;
+}
+.nav .box .l span{
+	font-size: 0.28rem;
+	color: #999;
+}
+.nav .r{
+	font-size: 0.26rem;
+	color: #2E3F51;
+	line-height: 0.4rem;
+	margin-right: 0.2rem;
+}
+.nav .box .r{
+	font-size: 0.28rem;
+	color: #666;
+}
+.nav .r b{
+	display: inline-block;
+	width: 0.1rem;
+}
+.content .former{
+	width: 7.1rem;
+	border-radius: 0.06rem;
+	box-shadow: 0 0 0.02rem rgba(0,0,0,0.06);
+	margin: 0.3rem auto 0;
+	background-color: #fff;
+	display: flex;
+}
+.content .former li{
+	flex: 1;
+}
+.content .former .box_number>div{
+	height: 0.84rem;
+	box-sizing: border-box;
+}
+.content .former li>div{
+	padding-left: 0.2rem;
+	line-height: 0.84rem;
+	color: #1EB389;
+}
+.content .former li .name{
+	height: 0.8rem;
+	color: #fff;
+	background-color:#1EB389;
+}
+.content .former .l .name{
+	border-top-left-radius: 0.06rem;
+}
+.content .former li .val{
+	background: url(../img/line1.png) repeat-x bottom;
+	border-right: 1px solid #DCDCDC;
+}
+.content .former li .val.cb{
+	background:none;
+}
+.content .former .r .name{
+	border-top-right-radius: 0.06rem;
+}
+.content .former .r .val{
+	border-right:none;
+}

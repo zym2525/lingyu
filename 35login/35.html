@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes"/>
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="css/iosSelect.css"/>
+	</head>
+	<body style="visibility: hidden;">
+		<div class="wrap">
+			<img src="img/bg.png" alt="bg" class="header"/>
+			<div class="content" id="content">
+				<h1 class="logo" id="logo">
+					<img src="img/logo.png" alt="logo"/>
+				</h1>
+				<div class="form">
+					<!--<form action="" method="post">-->
+						<div class="user">
+							<i></i>
+							<input type="text" name="user"/>
+							<span localeString='name'>请输入账号</span>
+						</div>
+						<div class="password">
+							<i></i>
+							<input type="password" name="password"/>
+							<span localeString='password'>请输入登录密码</span>
+						</div>
+						<!--<input type="button" value="登&nbsp录" class="submit" localeString='login' id="btn"/>-->
+						<div class="submit" localeString='login' id="btn">登&nbsp录</div>
+						<a><span localeString='forget' id="forget">忘记密码？</span></a>
+					<!--</form>-->
+				</div>
+				<div id="hint"></div>
+			</div>
+			<div class="footer">
+				<div class="language_box" id="language_box">
+					<span class="language" localeString='language'>语言</span>
+					<div></div>
+					<span>(</span>
+					<span class="language_name" localeString='language_name'>中文</span>
+					<span>)</span>
+				</div>
+			</div>
+		</div>
+	</body>	
+		<script src="../libs/zepto.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../libs/main.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/MD5-2.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/getPorts.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/userLoad.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/language.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../libs/iosSelect.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../libs/adaptive.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../libs/cookie.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/resource.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../libs/setLanguage.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/select.js" type="text/javascript" charset="utf-8"></script>
+</html>

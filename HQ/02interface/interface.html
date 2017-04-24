@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+   		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="../libs/iosSelect.css"/>
+		<!--<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />-->
+	</head>
+		
+	<body style="visibility: hidden;">
+		<div id="shadow">
+			<div id="hint">
+				<input type="text" placeholder="请在此输入" id="text2"/>
+				<div class="cancel" id="cancel1" localeString='cancel'>取消</div>
+				<div class="confirm" id="confirm1" localeString='complete'>确定</div>
+			</div>
+		</div>
+		<div id="shadow2">
+			<div id="hint3">
+				<h2 id="text4" localeString='changeP'>确认要修改密码？</h2>
+				<div class="cancel" id="cancel3" localeString='cancel'>取消</div>
+				<div class="confirm" id="confirm3" localeString='complete'>确定</div>
+			</div>
+		</div>
+		<div id="hintBox">询价成功！</div>
+		<div class="wrap">
+			<div class="header" style="display: block;">
+				<header>
+					<h2><span localeString='title1'>报价系统</span></h2>
+				</header>
+			</div>
+			<div class="header">
+				<header class="header2">
+					<img src="../img/shuaxin.png" alt="shuaxin" class="shuaxin1"/>
+					<h2 localeString='title2'>询盘管理</h2>
+					<img src="../img/search.png" alt="search" class="search" id="enquirySearch"/>
+					<ul class="list" id="list">
+						<li id="cost20gp" localeString='f1'>客户优先</li>
+						<li id="sailingDay" localeString='f2'>报价状态优先</li>
+						<li id="customsClearance" localeString='f3'>询价时间优先</li>
+					</ul>
+				</header>
+				<ul class="nav1">
+					<li class="active" >
+						<span localeString='current_inquiry'>当前询盘</span>
+						(<span class="n">0</span>)
+					</li>
+					<li id="btn2">
+						<span localeString='Completed'>已完成</span>
+						(<span class="n">0</span>)
+					</li>
+					<li id="btn3">
+						<span localeString='canceled'>已取消</span>
+						(<span class="n">0</span>)
+					</li>
+				</ul>
+			</div>
+			<div class="header">
+				<header class="header3">
+					<img src="../img/shuaxin.png" alt="shuaxin" class="shuaxin3"/>
+					<h2 localeString='title4'>订单管理</h2>
+					<img src="../img/search.png" alt="search" class="search" id="logisticsSearch"/>
+				</header>
+				<ul class="nav3">
+					<li class="active">
+						<span localeString='current_order'>当前询价</span>
+						<span class="nm">（0）</span>
+					</li>
+					<li>
+						<span localeString='order_history'>已完成</span>
+						<span>（0）</span>
+					</li>
+				</ul>
+			</div>
+			<div class="header">
+				<header class="header4">
+					<!--<img src="../img/arrow2.png" alt="arrow" />-->
+					<h2 localeString='title3'>我的账户</h2>
+					<img src="../img/save.png" alt="save" class="save" id="save"/>
+				</header>
+			</div>
+			<section class="enterances enterances1">
+				<section class="content">
+					<section class="port">
+						<div class="start_box selector" id="start_box">
+							<span localeString='start'>起运港</span>
+							<div class="name">
+								<em id="pol" code='CNNGB'>NINGBO</em>
+								<i></i>
+							</div>
+						</div>
+						<h2 class="exchange" id="exchange"></h2>
+						<div class="end_box" id="end_box">
+							<span localeString='end'>目的港</span>
+							<div class="name">
+								<em id="pod" code='AEDUB'>DUBAI</em>
+								<i></i>
+							</div>
+						</div>
+					</section>
+					<section class="port ship_company selector" id="carrys">
+						<div class="box">
+							<span localeString='company' id="companyBox">选择船公司</span>
+							<div class="name">
+								<em id="carrysName" code='0'></em>
+							</div>
+						</div>
+						<i></i>
+					</section>
+					<section class="btn_box">
+						<a class="btn1" localeString='search'>搜索</a>
+						<a class="btn2" localeString='inquiry'>直接电话供应商</a>
+					</section>
+				</section>
+				</section>
+			<section class="enterances enterances2">
+					<section class="content" style="display: block;">
+						<section class="enquiry" id="enquiry1">
+							
+						</section>
+						<section class="container bReady" id="tpl">
+								<i class="bCompete"></i>
+								<i class="btn btn1" localeString='direct_offer'>直接报价</i>
+								<i class="btn btn2" localeString='Post_inquiry'>发布询价</i>
+								<!--<ul class="title">
+									<li class="active">
+										<i class="icon1"></i>
+										<div class="name" localeString='field1_2'>总部已报价</div>
+									</li>
+									<li>
+										<i class="icon1"></i>
+										<div class="name" localeString='field2'>未向客户报价</div>
+									</li>
+								</ul>-->
+								
+								<ul>
+									<li>
+										<i class="icon2 icon1"></i>
+										<div class="name" localeString='customer'>客户：</div>
+										<span>{{customCompanyName}}</span>
+									</li>
+								</ul>
+								<!--<ul class="time sed">
+									<li class="ft">
+										<i class="icon3 icon1"></i>
+										<div class="name" localeString='booking'>已订舱：</div>
+										<span>{{expectTime}}</span>
+									</li>-->
+									<!--<li>
+										<div class="name" localeString='inquirying'>已询价：</div>
+										<span>18次</span>
+									</li>-->
+								<!--</ul>-->
+								<ul class="top time">
+									<li>
+										<i class="ren icon1"></i>
+										<div class="name" localeString='Inquiry_party'>询价方：</div>
+										<span>{{enquiryPart}}</span>
+									</li>
+								</ul>
+								<ul class="top time">
+									<li>
+										<i class="ren icon1"></i>
+										<div class="name" localeString='inquirer'>询价人：</div>
+										<span>{{enquiryAccount}}</span>
+									</li>
+									<li>
+										<div class="name" localeString='phone'>联系电话：</div>
+										<span>{{mobileNo}}</span>
+									</li>
+								</ul>
+								<ul class="top">
+									<li>
+										<i class="icon1"></i>
+										<div class="name" localeString='Inquiry_time'>询价时间：</div>
+										<span>{{enquiryTime}}</span>
+									</li>
+								</ul>
+								<ul class="destination">
+									<li class="start_box">
+										<div class="start">
+											<img src="../img/start.png" alt="start"/>
+											<span localeString='start'>起运港</span>
+										</div>
+										<div class="name">{{polName}}</div>
+									</li>
+									<li class="icon">
+										<img src="../img/ship_main.png" alt="ship_main"/>
+										<img src="../img/arrow.png" alt="arrow"/>
+									</li>
+									<li class="end_box">
+										<div class="end">
+											<img src="../img/finish.png" alt="finish"/>
+											<span localeString='end'>目的港</span>
+										</div>
+										<div class="name">{{podName}}</div>
+									</li>
+								</ul>
+								<ul class="time">
+									<li class="ft lit">
+										<div class="name" localeString='delivery_time'>预计出货时间：</div>
+										<span>{{expectTime}}</span>
+									</li>
+									<li>
+										<div class="name" localeString='company2'>船公司：</div>
+										<span class="carryName"></span>
+									</li>
+									<li class="ct">
+										<div class="箱型箱量" localeString='Box_type_Num'>箱型箱量：</div>
+										<span class='num'>{{num20gp}}<b></b>{{num40gp}}<b></b>{{num40hq}}<b></b>{{num45hc}}</span>
+									</li>
+								</ul>
+								<ul class="remark cb">
+									<li>
+										<div class="name" localeString='remark'>备     注：</div>
+										<span class="remarkBox"></span>
+									</li>
+								</ul>
+							</section>
+					</section>
+					
+					<section class="content" >
+						<section class="enquiry" id="enquiry2"></section>
+					</section>
+					<section class="content">
+						<section class="enquiry" id="enquiry3"></section>
+					</section>
+				</section>
+			<section class="enterances enterances3">
+				<section class="content" id="Nodes1">
+					
+				</section>
+				<div class="order_cell" id="tpl3">
+					<div class="title">
+						<i></i>
+						<span class="name" localeString='order_number'>订单编号：</span>
+						<span class="val orderCode"></span>
+					</div>
+					<ul class="order">
+						<li>
+							<span class="value mbl" ></span>
+							<span class="name" localeString='B/L_NO'>提单号</span>
+						</li>
+						<li>
+							<span class="value voyage"></span>
+							<span class="name" localeString='VOYAGE'>航次</span>
+							
+						</li>
+						<li class="cb">
+							<span class="value nodeTime"></span>
+							<span class="name nodeName"  localeString='State' ></span>
+							<i></i>
+						</li>
+					</ul>
+				</div>
+				<section class="content" id="Nodes2"></section>
+			</section>
+			<section class="enterances enterances4">
+				<section class="content">
+					<div class="msg">
+						<i class="portrait"></i>
+						<div class="box">
+							<div class="name" id="userName"></div>
+							<div class="phone" id="mobileNo"></div>
+						</div>
+					</div>
+					<div>
+						<div class="company block">
+							<div class="icon">
+								<img src="../img/company.png" alt="company"/>
+							</div>
+							<div class="cell">
+								<div class="l" localeString='Enterprise_name'>企业名称</div>
+								<div class="r">
+									<span id="companyName"></span>
+								</div>
+							</div>
+						</div>
+						<div class="mailbox block">
+							<div class="icon">
+								<img src="../img/email.png" alt="email"/>
+							</div>
+							<div class="cell cb">
+								<div class="l" localeString='email'>邮箱</div>
+								<div class="r">
+									<span id="email"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div>
+						<div class="language block">
+							<div class="icon">
+								<img src="../img/language.png" alt="language"/>
+							</div>
+							<div class="cell" id='language_box'>
+								<div class="l" localeString='language'>语言选择</div>
+								<div class="r">
+									<span localeString='language_name'>中文</span>
+									<i class="right"></i>
+								</div>
+							</div>
+						</div>
+						<div class="mima block">
+							<div class="icon">
+								<img src="../img/mima.png" alt="mima"/>
+							</div>
+							<div class="cell cb" id="change">
+								<div class="l" localeString='change_password'>修改密码</div>
+								<div class="r">
+									<i class="right"></i>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--<a class="exit" id='exit' localeString='exit'>退出</a>-->
+					<div class="exit" id='exit' localeString='exit'>退出</div>
+				</section>
+			</section>
+			<footer>
+				<div class="active">
+					<i class="icon1"></i>
+					<span localeString='Freight query'>运价查询</span>
+				</div>
+				<div id="btnEnquirys">
+					<i class="icon2"></i>
+					<span localeString='Inquiry management'>询盘管理</span>
+				</div>
+				<div id="btnlogistics">
+					<i class="icon4"></i>
+					<span localeString='account'>订单管理</span>
+				</div>
+				<div>
+					<i class="icon3"></i>
+					<span localeString='account2'>我的账户</span>
+				</div>
+			</footer>
+		</div>
+	</body>	
+		<script src="../libs/zepto.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../libs/main.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../libs/cookie.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/getEnquirys.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/resource.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/getMsg.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/common.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../libs/setLanguage.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/tab.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../libs/adaptive.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../libs/iosSelect.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/select.js" type="text/javascript" charset="utf-8"></script>
+		<!--<script src="js/list.js" type="text/javascript" charset="utf-8"></script>-->
+		<script type="text/javascript">
+			$('.btn1').on('touchstart',function(){
+				open('../06Price-list/06.html?'+$('#pol').attr('code')+'&'+$('#pod').attr('code')+'&'+$('#carrysName').attr('code'))
+				return false;
+			});
+			$('#enquirySearch').on('touchstart',function(){
+				setCookie('whichone','enquiry',1);
+				sessionStorage.setItem('currentData',JSON.stringify(currentData));
+				sessionStorage.setItem('currentScrollT',JSON.stringify(currentScrollT));
+				open('../12Inquiry-management-search/12.html');
+				return false;
+			});
+//			$('#inquirySearch').on('touchstart',function(){
+//				sessionStorage.setItem('currentData2',JSON.stringify(currentData2));
+//				sessionStorage.setItem('currentScrollT2',JSON.stringify(currentScrollT2));
+//				setCookie('whichone','inquiry',1);
+//				open('../12Inquiry-management-search/12.html');
+//				return false;
+//			});
+			$('#logisticsSearch').on('touchstart',function(){
+				sessionStorage.setItem('currentData3',JSON.stringify(currentData3));
+				sessionStorage.setItem('currentScrollT3',JSON.stringify(currentScrollT3));
+				open('../19Logistics-visualization-search/19.html');
+				return false;
+			});
+		</script>
+</html>

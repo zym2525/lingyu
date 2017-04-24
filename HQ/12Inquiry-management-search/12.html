@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../libs/base.css"/>
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="../libs/iosSelect.css"/>
+	</head>
+	<body style="visibility: hidden;">
+		<div class="wrap">
+			<div id="hintBox">请填写起始时间！</div>
+			<header>
+				<img src="../img/arrow2.png" alt="arrow" id="arrow"/>
+				<h2 localeString='title'>搜索</h2>
+			</header>
+			<section class="content">
+				<ul class="box1">
+					<li class="box">
+						<div class="title">
+							<i class="s"></i>
+							<span localeString='field1'>时间区间</span>
+						</div>
+						<div class="container">
+							<div class="l">
+								<div class="cell lt time_selector" localeString='field2' id="startDate">起始时间</div>
+							</div>
+							<b></b>
+							<div class="r">
+								<div class="cell lt time_selector" localeString='field3'  id="endDate">结束时间</div>
+							</div>
+						</div>
+					</li>
+					<li class="box last">
+						<div class="title">
+							<i class="s"></i>
+							<span localeString='field9'>报价状态</span>
+						</div>
+						<div class="container">
+							<div class="l">
+								<div class="cell lt btn btn2">
+									<i></i>
+									<span localeString='field10' schemeStatus='0,1,2,5'>未报价</span>
+								</div>
+							</div>
+							<div class="r">
+								<div class="cell lt active btn btn5">
+									<i></i>
+									<span localeString='field11' schemeStatus='3'>已报价</span>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<ul class="box2">
+					<li class="box port">
+						<div class="title">
+							<i class="s"></i>
+							<span localeString='field12'>起运港</span>
+						</div>
+						<div class="container pBox">
+							<span class="name" localeString='field12'>起运港</span>
+							<div class="time selector">
+								<em id="pol" code='CNNGB'>NINGBO</em>
+								<i></i>
+							</div>
+						</div>
+					</li>
+					<li class="box port">
+						<div class="title">
+							<i class="s"></i>
+							<span localeString='field13'>目的港</span>
+						</div>
+						<div class="container pBox" id="podBox">
+							<span class="name" localeString='field13'>目的港</span>
+							<div class="time">
+								<em id="pod"></em>
+								<i></i>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</section>
+			<footer>
+				<a localeString='title' id="search">搜索</a>
+			</footer>
+		</div>
+		<script src="../libs/zepto.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../libs/main.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../libs/cookie.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/resource.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../libs/adaptive.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../libs/iosSelect.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../libs/setLanguage.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/common.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/select.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

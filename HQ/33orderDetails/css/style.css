@@ -1,0 +1,346 @@
+html{
+	height: 100%;
+	font-size: 100px;
+}
+body{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	-webkit-user-select: none;
+}
+.wrap{
+	width: 7.5rem;
+	margin: 0 auto;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+#tplLi{
+	display: none;
+}
+header{
+	height: 0.9rem;
+	padding: 0.38rem 0.24rem 0;
+	background-color: #097b47;
+	position: relative;
+}
+header .arrow{
+	height: 0.36rem;
+	position: absolute;
+	left: 0.2rem;
+	top: 0.65rem;
+	padding: 0 0.3rem 0.2rem 0;
+}
+header h2{
+	font-size: 0.34rem;
+	color: #fff;
+	margin: 0.3rem 0 0.42rem;
+	text-align: center;
+}
+.content{
+	background-color: #f3f5f7;
+	flex: 1;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+}
+.block{
+	margin-top: 0.18rem;
+	font-size: 0.28rem;
+	color: #333;
+	background-color: #fff;
+}
+.block dt{
+	height: 0.72rem;
+	margin-left: 0.1rem;
+	position: relative;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+.block dt em,.content ul li em{
+	font-size: 0.28rem;
+}
+.block dt .l{
+	width: 7.4rem;
+	height: 1px;
+	background: url(../img/line1.png) no-repeat;
+	position: absolute;
+	bottom:-1px;
+	left: 0;
+}
+.block dt span{
+	font-size: 0.24rem;
+	color: #999;
+	margin-left: 0.1rem;
+}
+.block dt .s{
+	display: block;
+	width: 0.05rem;
+	height: 0.2rem;
+	background-color: #2e3f51;
+	border-radius: 0.02rem;
+	margin: 0 0.1rem 0 0.16rem;
+}
+.block dd{
+	height: 0.88rem;
+	width: 7.02rem;
+	margin-left: 0.24rem;
+	line-height: 0.88rem;
+	border-bottom: 1px solid #dcdcdc;
+	
+}
+.block dd span em,.block dd span{
+	line-height: 0.88rem;
+	font-size: 0.28rem;
+}
+#append dd span input{
+	color: #999;
+}
+#append .Fees span input{
+	color: #1eb389;
+}
+.block .Fees .val{
+	color: #1eb389;
+}
+.block dd input{
+	font-size: 0.3rem;
+	line-height: 0.88rem;
+	width: 0.8rem;
+	text-align: center;
+}
+.block dd .name em{
+	color: #666;
+}
+.block .cb{
+	border-bottom:none;
+}
+.block dd .val{
+	color: #999;
+}
+.block dd img{
+	width: 0.5rem;
+	margin: 0.19rem 0.18rem 0 -0.06rem;
+}
+.block .quantity{
+	height: 1.6rem;
+}
+.content ul{
+	font-size: 0.28rem;
+	color: #333;
+	overflow: hidden;
+	background-color: #fff;
+}
+.content ul li{
+	/*width: 7.02rem;*/
+	/*margin-left: 0.24rem;*/	
+	border-bottom: 1px solid #dcdcdc;
+}
+.content ul .cb{
+	border-bottom:none;
+}
+.content ul li .title{
+	margin-top: 0.3rem;
+	display: flex;
+	align-items: center;
+	font-size: 0.28rem;
+	color: #333;
+}
+.content ul li .title1{
+	margin-top: 0.24rem;
+}
+.content ul li .title .s{
+	display: block;
+	width: 0.05rem;
+	height: 0.2rem;
+	background-color: #2e3f51;
+	border-radius: 0.02rem;
+	margin-right: 0.16rem;
+}
+.content .quantity .container{
+	height: 1.6rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.content .quantity .container .cell{
+	width: 1.46rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 0.26rem;
+}
+.content .quantity .container .cell input{
+	display: block;
+	width: 0.68rem;
+	height: 0.58rem;
+	font-size: 0.28rem;
+	/*border: 1px solid #aaa;*/
+	background-color: #eee;
+	border-radius: 4px;
+	color: #666;
+	text-align: center;
+}
+.freight dd{
+	width: 100%;
+	margin: 0;
+	display: flex;
+}
+.freight dd h2{
+	font-size: 0.3rem;
+	line-height: 0.88rem;
+	width:0.64rem;
+	margin-left: 0.12rem;
+}
+.freight dd .kind{
+	line-height: 0.24rem;
+}
+.freight dd .price{
+	line-height: 0.36rem;
+}
+.freight dd ul{
+	flex: 1;
+	display: flex;
+}
+.freight dd ul li{
+	flex: 1;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	height: 0.88rem;
+	line-height: 0.88rem;
+	border-right: 1px solid #dcdcdc;
+	border-bottom: none;
+}
+.freight dd ul li.cr{
+	border-right:none;
+}
+.freight dd ul li .kind{
+	color: #666;
+	font-size: 0.24rem;
+}
+.freight dd ul li .price{
+	color: #1eb389;
+	font-size: 0.32rem;
+}
+/*.freight dd:last-child{
+	width: 7.02rem;
+	margin-left: 0.24rem;
+}*/
+.block dd span.green{
+	color: #1eb389;
+}
+.block dd span.green em,.block dd .val em{
+	font-size: 0.28rem;
+}
+.block dd span.green b{
+	display: inline-block;
+	width: 0.1rem;
+}
+.block.total dd .val{
+	font-size: 0.36rem;
+	color: #1eb389;
+}
+.block.total .profit .val{
+	color: #fe646a;
+}
+.block.total dd .val{
+	display: flex;
+	align-items: center;
+}
+.block.total dd .val em{
+	font-size: 0.24rem;
+}
+.block.total dd .val b{
+	width: 0.4rem;
+}
+.block .pay span,.block .pay span em{
+	color: #999;
+}
+.block .pay span i{
+	width: 0.28rem;
+	height: 0.28rem;
+	border-radius: 50%;
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+	margin: 0.3rem 0.2rem 0;
+}
+.block .pay span.active span{
+	color: #333;
+}
+.block .pay span.active em{
+	color: #666;
+}
+.block .pay span.active i{
+	background-color: #1eb389;
+	border:none;
+}
+.block dd.bill{
+	height: 1.32rem;
+}
+.block dd .itemBox .item{
+	height: 0.66rem;
+	line-height: 0.66rem;
+	font-size: 0.28rem;
+	color: #999;
+}
+.block dd .itemBox .item span{
+	line-height: 0.66rem;
+}
+.block dd .itemBox .item i{
+	display: inline-block;
+	width: 0.28rem;
+	height: 0.28rem;
+	border: 1px solid #999;
+	text-align: center;
+	border-radius: 50%;
+	line-height: 0.28rem;
+}
+.block dd.remark{
+	height: 2.16rem;
+}
+textarea{
+	width: 7rem;
+	height: 0.9rem;
+	resize: none;
+	border: 1px solid #dcdcdc;
+	border-radius: 2px;
+	padding-top: 0.3rem;
+	padding-left: 0.3rem;
+	margin: 0rem 0 0.4rem;
+	font-size: 0.28rem;
+	box-sizing: border-box;
+	color: #666;
+}
+#text_box{
+	line-height: 0;
+	position: relative;
+}
+#text_box span{
+	position: absolute;
+	font-size: 0.28rem;
+	line-height: 0.28rem;
+	color: #999;
+	left: 0.3rem;
+	top: 1.2rem;
+}
+footer{
+	height: 2rem;
+	background-color: #f3f5f7;
+	font-size: 0.24rem;
+	color: #666;
+	line-height: 0.36rem;
+}
+footer a{
+	display: block;
+	width: 7.1rem;
+	height: 0.9rem;
+	border-radius: 0.06rem;
+	text-align: center;
+	line-height: 0.9rem;
+	font-size: 0.34rem;
+	color: #fff;
+	background-color: #2e3f51;
+	margin: 0.6rem auto 0.24rem;
+}

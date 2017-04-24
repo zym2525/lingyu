@@ -1,0 +1,117 @@
+var languageName=['CN','US'];
+var langText={
+	'US':{
+		'title':'Inquiry',
+		'field1':'POL',
+		'field2':'POD',
+		'field3':'Carrier',
+		'field4':'Please enter other matters(15 words most)',
+		'field9':'Type&Number',
+		'field10':'ETD',
+		'field11':'ETD',
+		'field12':'Remark',
+		'field13':'Inquiry',
+		'field14':'CUSTOMER',
+		'field15':'NINGBO HQ',
+		'field16':'Thailand HQ',
+		'field17':'please input customer name',
+	},
+	'CN':{
+		'title':'询价',
+		'field1':'起运港',
+		'field2':'目的港',
+		'field3':'船公司',
+		'field4':'请输入其他事项(不超过15字)',
+		'field9':'箱型箱量',
+		'field10':'预计出货时间',
+		'field11':'出货时间',
+		'field12':'备注',
+		'field13':'询价',
+		'field14':'客户',
+		'field15':'向宁波总部',
+		'field16':'向泰国总部',
+		'field17':'请输入客户名称',
+	}
+}
+var f1='取消';
+var f2='完成';
+var data=[
+	[
+		{'id': 'CNNGB', 'value': 'NINGBO'},
+    	{'id': 'CNNGB2', 'value': 'English'},
+	],
+	[
+		{'id': '0', 'value': '全部'},
+	],
+	[
+		{'id': '0', 'value': '宁波铃与'},
+		{'id': '1', 'value': '泰国铃与'},
+	],
+	[
+		{'id': 'LYZB', 'value': 'NINGBO LINGYU'},
+		{'id': 'TGLY', 'value': 'Thailand LINGYU'},
+	],
+];
+var conpanyArr=[
+	{'id': '0', 'value': '宁波铃与'},
+	{'id': '1', 'value': '泰国铃与'},
+]
+var yearData=[
+	{'id': '00001', 'value': '2017年'},
+	{'id': '00002', 'value': '2018年'},
+	{'id': '00003', 'value': '2019年'},
+	{'id': '00004', 'value': '2020年'},
+	{'id': '00005', 'value': '2021年'},
+	{'id': '00006', 'value': '2022年'},
+	{'id': '00007', 'value': '2023年'},
+	{'id': '00008', 'value': '2024年'},
+	{'id': '00009', 'value': '2025年'},
+	{'id': '00010', 'value': '2026年'},
+];
+var monthData=[
+	{'id': '10000', 'value': '01月'},
+	{'id': '10001', 'value': '02月'},
+	{'id': '10002', 'value': '03月'},
+	{'id': '10003', 'value': '04月'},
+	{'id': '10004', 'value': '05月'},
+	{'id': '10005', 'value': '06月'},
+	{'id': '10006', 'value': '07月'},
+	{'id': '10007', 'value': '08月'},
+	{'id': '10008', 'value': '09月'},
+	{'id': '10009', 'value': '10月'},
+	{'id': '10010', 'value': '11月'},
+	{'id': '10011', 'value': '12月'},
+];
+var dateData=[
+	{'id': '20000', 'value': '01日'},
+	{'id': '20001', 'value': '02日'},
+	{'id': '20002', 'value': '03日'},
+	{'id': '20003', 'value': '04日'},
+	{'id': '20004', 'value': '05日'},
+	{'id': '20005', 'value': '06日'},
+	{'id': '20006', 'value': '07日'},
+	{'id': '20007', 'value': '08日'},
+	{'id': '20008', 'value': '09日'},
+	{'id': '20009', 'value': '10日'},
+	{'id': '20010', 'value': '11日'},
+	{'id': '20011', 'value': '12日'},
+	{'id': '20012', 'value': '13日'},
+	{'id': '20013', 'value': '14日'},
+	{'id': '20014', 'value': '15日'},
+	{'id': '20015', 'value': '16日'},
+	{'id': '20016', 'value': '17日'},
+	{'id': '20017', 'value': '18日'},
+	{'id': '20018', 'value': '19日'},
+	{'id': '20019', 'value': '20日'},
+	{'id': '20020', 'value': '21日'},
+	{'id': '20021', 'value': '22日'},
+	{'id': '20022', 'value': '23日'},
+	{'id': '20023', 'value': '24日'},
+	{'id': '20024', 'value': '25日'},
+	{'id': '20025', 'value': '26日'},
+	{'id': '20026', 'value': '27日'},
+	{'id': '20027', 'value': '28日'},
+	{'id': '20028', 'value': '29日'},
+	{'id': '20029', 'value': '30日'},
+	{'id': '20030', 'value': '31日'},
+];
