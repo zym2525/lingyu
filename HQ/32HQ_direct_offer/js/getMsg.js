@@ -148,7 +148,7 @@
 				setTimeout(function(){
 					$('#hintBox').hide();
 				},700)
-			}else if($('#expireDate').val()==''){
+			}else if($('#expireDate').text()==''){
 				if(getCookie('lng')=='CN'){
 					$('#hintBox').html('请填写有效期！').show();
 				}else{

@@ -53,6 +53,7 @@ var langText={
 		'Post_inquiry':'Post_inquiry',
 		'exit':'Exit',
 		'changeP':'Change password？',
+		'inquirying':'inquiry:'
 	},
 	'CN':{
 		'title1':'报价系统',
@@ -106,6 +107,7 @@ var langText={
 		'Post_inquiry':'发布询价',
 		'exit':'退出',
 		'changeP':'确认要修改密码？',
+		'inquirying':'已询价：',
 	}
 }
 var f1='取消';

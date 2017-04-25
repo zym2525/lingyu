@@ -36,16 +36,13 @@ $(function(){
 					oDl.getElementsByTagName('dd')[oDl.getElementsByTagName('dd').length-1].className='cb';
 				};
 			}
-			$('dd span').on('touchstart',function(){
-				$(this)[0].timer=setTimeout(()=>{
-		    		setCookie('port',$(this).text().split('(')[0]);
-		    		setCookie('code',$(this).find('span').attr('code'));
+			$('dd').each(function(index,ele){
+				isClick($(ele),function(ele){
+					setCookie('port',ele.text().split('(')[0]);
+		    		setCookie('code',ele.find('span').attr('code'));
 		    		open(getCookie('local'));
-		    	},300);
-		    	$(this).on('touchmove',function(){
-		    		clearTimeout($(this)[0].timer);
-		    	})
-			});
+				})
+			})
 		},300)
 		
 		//设置热门港口
