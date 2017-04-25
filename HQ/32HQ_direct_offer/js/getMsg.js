@@ -194,7 +194,6 @@
 						'voyage':'',
 					},
 					success:function(json){
-						console.log(json)
 						if(json.retCode==0000){
 							if(getCookie('lng')=='CN'){
 								$('#hintBox').html('确认报价成功！').show();

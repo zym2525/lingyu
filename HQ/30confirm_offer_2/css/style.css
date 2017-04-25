@@ -511,10 +511,12 @@ header h2{
 footer{
 	height: 2.07rem;
 	background-color: #f2f4f6;
+	display: flex;
 }
 footer a{
 	display: block;
-	width: 7.1rem;
+	flex: 1;
+	/*width: 7.1rem;*/
 	height: 0.9rem;
 	border-radius: 0.06rem;
 	text-align: center;
@@ -522,7 +524,7 @@ footer a{
 	font-size: 0.34rem;
 	color: #fff;
 	background-color: #2e3f51;
-	margin: 0.6rem auto 0;
+	margin: 0.6rem 0.3rem 0;
 }
 #shadow2{
 	width: 100%;
@@ -532,7 +534,7 @@ footer a{
 	left: 0;
 	top: 0;
 	display: none;
-	z-index: 111;
+	z-index: 222;
 }
 #shadow2 #hint2{
 	width: 5.42rem;
@@ -540,33 +542,22 @@ footer a{
 	display: flex;
 	flex-wrap: wrap;
 	position: fixed;
-	top: 20%;
+	z-index: 222;
+	top: 30%;
 	left: 50%;
 	margin-left: -2.71rem;
 }
-#shadow2 #hint2 input{
+#shadow2 #hint2 h2{
 	width: 100%;
 	background-color: #fff;
-	height: 1rem;
+	height: 1.42rem;
 	border-bottom: 1px solid #e0e0e0;
 	color: #1b1b1b;
 	text-align: center;
-	line-height: 1rem;
+	line-height: 1.42rem;
 	font-size: 0.32rem;
 	border-top-left-radius: 0.18rem;
 	border-top-right-radius: 0.18rem;
-	font-weight: bold;
-}
-#shadow2 #hint2 .feeContent{
-	width: 25%;
-	background-color: #fff;
-	height: 1rem;
-	border-bottom: 1px solid #e0e0e0;
-	box-sizing:border-box;
-	color: #1b1b1b;
-	text-align: center;
-	line-height:1rem;
-	font-size: 0.32rem;
 	font-weight: bold;
 }
 #shadow2 #hint2 div{

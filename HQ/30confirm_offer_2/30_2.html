@@ -16,6 +16,13 @@
 				<div class="confirm" id="confirm" localeString='confirm'>确定</div>
 			</div>
 		</div>
+		<div id="shadow2">
+			<div id="hint2">
+				<h2 localeString='confirm3'>确认订舱？</h2>
+				<div class="cancel" id="cancel2" localeString='cancel'>取消</div>
+				<div class="confirm" id="confirm2" localeString='confirm'>确定</div>
+			</div>
+		</div>
 		<div id="hintBox">发布方案成功！</div>
 		<section class="updateFee updateFee1">
 			<header>
@@ -122,43 +129,7 @@
 						</li>
 					</ul>
 				</section>
-				<!--<section class="container">
-					<dl class="block">
-						<dt>
-							<i class="s"></i>
-							<b localeString='field24'>报价信息</b>
-						</dt>
-						<dd class="clearfix">
-							<span class="name fl" localeString='field25'>报价企业</span>
-							<div class="fr companyBox">
-								<input type="text" value=""/>
-								<span class="s1" localeString='field28'>请输入报价企业</span>
-								<span class="s2"></span>
-							</div>
-							
-						</dd>
-						<dd class="clearfix">
-							<span class="name fl" localeString='field26'>报价人</span>
-							<span class="val fr" id="contector"></span>
-						</dd>
-						<dd class="clearfix cb">
-							<span class="name fl" localeString='field27'>电话</span>
-							<span class="val fr" id="contectorMobileNo"></span>
-						</dd>
-					</dl>
-				</section>-->
 				<section class="case container">
-					<!--<dl class="top2 block">
-						<dt>
-							<i class="s"></i>
-							<b localeString='Have_booking'>已订舱</b>
-							<i class="l"></i>
-							<div>
-								<span id="quantity">6</span>
-								<span localeString='ticket'>票</span>
-							</div>
-						</dt>
-					</dl>-->
 					<ul class="destination">
 						<li class="start_box">
 							<div class="start">
@@ -211,16 +182,6 @@
 							<span class="name fl sailSelector" localeString='field7'>截关</span>
 							<span class="val fr" id="customsClearance">{{customsClearance}}</span>
 						</dd>
-						<!--<dd class="clearfix">
-							<img src="img/icon4.png" alt="icon4" class="fl"/>
-							<span class="name fl" localeString='field30' id="vesselName">船名</span>
-							<input class="val fr" type="text" id="vessel" value={{vessel}} disabled/>
-						</dd>
-						<dd class="clearfix">
-							<img src="img/icon4.png" alt="icon4" class="fl"/>
-							<span class="name fl" localeString='field31' id="voyageName">航次</span>
-							<input class="val fr" type="text" id="voyage" value={{voyage}} disabled/>
-						</dd>-->
 					</dl>
 				</section>
 				<section class="price container">
@@ -243,14 +204,6 @@
 										<input type="number" value="0"/>
 									</div>
 								</li>
-								<!--<li class="cr">
-									<span class="kind" ">40GP</span>
-									<span class="price"><em>$</em><input type="number" value="0" /></span>
-									<div class="bj">
-										<em>$</em>
-										<input type="number" value="0"/>
-									</div>
-								</li>-->
 							</ul>
 						</dd>
 					</dl>
@@ -294,6 +247,7 @@
 				</section>
 			</section>
 			<footer>
+				<a localeString='title4' id="btn2">确认订舱</a>
 				<a localeString='title' id="btn">确认此方案</a>
 			</footer>
 		</div>
@@ -307,5 +261,4 @@
 	<script src="js/getMsg.js" type="text/javascript" charset="utf-8"></script>
 	<script src="../libs/adaptive.js" type="text/javascript" charset="utf-8"></script>
 	<script src="../libs/iosSelect.js" type="text/javascript" charset="utf-8"></script>
-	<!--<script src="js/select.js" type="text/javascript" charset="utf-8"></script>-->
 </html>

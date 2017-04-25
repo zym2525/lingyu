@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<title></title>
-		<link rel="stylesheet" type="text/css" href="../libs/base.css"/>
-		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="../libs/base.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
 	</head>
+
 	<body style="visibility: hidden;">
 		<div class="wrap">
 			<header>
-				<img src="img/arrow2.png" alt="arrow" id="arrow"/>
+				<img src="img/arrow2.png" alt="arrow" id="arrow" />
 				<h2 localeString='title'>物流可视化</h2>
 			</header>
 			<div class="content">
@@ -32,18 +34,18 @@
 						<ul class="destination">
 							<li class="start_box">
 								<div class="start">
-									<img src="img/start.png" alt="start"/>
+									<img src="img/start.png" alt="start" />
 									<span localeString='field12'>起运港</span>
 								</div>
 								<div class="name">{{polName}}</div>
 							</li>
 							<li class="icon">
-								<img src="img/ship_main.png" alt="ship_main"/>
-								<img src="img/arrow.png" alt="arrow"/>
+								<img src="img/ship_main.png" alt="ship_main" />
+								<img src="img/arrow.png" alt="arrow" />
 							</li>
 							<li class="end_box">
 								<div class="end">
-									<img src="img/finish.png" alt="finish"/>
+									<img src="img/finish.png" alt="finish" />
 									<span localeString='field13'>目的港</span>
 								</div>
 								<div class="name">{{podName}}</div>
@@ -73,20 +75,24 @@
 								<span class="val" id="pot">{{potName}}</span>
 							</div>
 						</div>
-						<div class="container big">
+						<div class="container">
 							<div class="l">
-								<div class="cell">
+								<div class="cell lt">
 									<span class="name" localeString='field6'>预计出货时间：</span>
 									<span class="val" id="expectDate"></span>
-								</div>
-								<div class="cell lt">
-									<span class="name" localeString='field7'>箱型箱量：</span>
-									<span class="val" id="elements"></span>
 								</div>
 							</div>
 							<div class="r">
 								<span class="name" localeString='field8'>船公司：</span>
 								<span class="val">{{carryCode}}</span>
+							</div>
+						</div>
+						<div class="container">
+							<div class="l">
+								<div class="cell lt">
+									<span class="name" localeString='field7'>箱型箱量：</span>
+									<span class="val" id="elements"></span>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -174,14 +180,14 @@
 				</div>
 			</div>
 		</div>
-	</body>	
-		<script src="../libs/zepto.min.js" type="text/javascript" charset="utf-8"></script>
-		<script src="../libs/cookie.js" type="text/javascript" charset="utf-8"></script>
-		<script src="../libs/main.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/resource.js" type="text/javascript" charset="utf-8"></script>
-		<!--<script src="js/skip.js" type="text/javascript" charset="utf-8"></script>-->
-		<script src="js/getNodesByOrder.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/getMsg.js" type="text/javascript" charset="utf-8"></script>
-		<script src="../libs/setLanguage.js" type="text/javascript" charset="utf-8"></script>
-	
+	</body>
+	<script src="../libs/zepto.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../libs/cookie.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../libs/main.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/resource.js" type="text/javascript" charset="utf-8"></script>
+	<!--<script src="js/skip.js" type="text/javascript" charset="utf-8"></script>-->
+	<script src="js/getNodesByOrder.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/getMsg.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../libs/setLanguage.js" type="text/javascript" charset="utf-8"></script>
+
 </html>

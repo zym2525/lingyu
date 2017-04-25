@@ -110,6 +110,8 @@ $(function(){
 			aContent2.eq($(this).index()).show();
 		})
 		
+		
+		
 		//搜索
 		var timer=null;
 		$('#text input').on('keyup',function(){

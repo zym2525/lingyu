@@ -2,6 +2,7 @@ var languageName=['CN','US'];
 var langText={
 	'US':{
 		'title':'Confirm Offer',
+		'title4':'Confirm Booking',
 		'field1':'Inquiry No',
 		'field2':'Logistics Project No',
 		'field3':'Reply Time',
@@ -50,9 +51,11 @@ var langText={
 		'cancel':'Cancel',
 		'confirm':'Confirm',
 		'confirm2':'Confirm the quotation?',
+		'confirm3':'Confirm Booking?',
 	},
 	'CN':{
 		'title':'确认报价',
+		'title4':'确认订舱',
 		'field1':'询价编号',
 		'field2':'物流方案编号',
 		'field3':'回复时间',
@@ -102,6 +105,7 @@ var langText={
 		'cancel':'取消',
 		'confirm2':'确认报价吗？',
 		'confirm':'确定',
+		'confirm3':'确定订舱？',
 	}
 }
 //币种

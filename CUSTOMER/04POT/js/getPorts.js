@@ -47,7 +47,7 @@ function fuzzySearch(token,str,fn){
 		url:'http://106.14.251.28:8085/bizCenter/portService/fuzzySearch',
 		data:{
 			'accessToken':token,
-			'nameHeader':str,
+			'codeHeader':str,
 			'msgId':t+'',
 		},
 		success:function(json){

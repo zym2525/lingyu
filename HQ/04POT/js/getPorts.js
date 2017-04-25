@@ -52,7 +52,6 @@ function fuzzySearch(token,str,fn){
 		},
 		success:function(json){
 			if(json.retCode==0000){
-				console.log(eval(json.ports))
 				var hot=eval(json.ports);
 				fn&&fn(hot[0]['portCode']);
 			}

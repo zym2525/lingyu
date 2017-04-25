@@ -11,11 +11,14 @@
 		$('#enquiryPart').text(data['enquiryPart'])
 		$('#enquiryAccount').text(data['enquiryAccount'])
 		$('#mobileNo').text(data['mobileNo'])
-		if(data['status']==1||data['status']==2){
+		if(data['status']==2){
 			bOk=false;
 			$('input').attr('disabled',true).css('background-color','#fff');
 			$('footer').hide();
 			$('.content').css('padding-bottom','0.3rem')
+		}
+		if(data['status']==1){
+			$('#btn2').hide();
 		}
 		isClick($('#mobileNo'),function(){
 			if($('#mobileNo')){
@@ -42,7 +45,47 @@
 		$(this).siblings('.val').focus();
 		return false;
 	})
-	
+	$('#btn2').on('touchstart',function(){
+		$('#shadow2').show();
+	})
+	$('#cancel2').on('touchstart',function(){
+		$('#shadow2').hide();
+	})
+	$('#confirm2').on('touchstart',function(){
+		$('#shadow2').hide();
+		var t=new Date().getTime();
+		$.ajax({
+			type:'POST',
+			async:false,
+			url:"http://106.14.251.28:8085/bizCenter/enquiryService/confirmBooking?accessToken="+getCookie('accessToken')+"&msgId="+t+"&enquiryCode="+sessionStorage.getItem('enquiryCode')+"&schemeCode="+sessionStorage.getItem('schemeCode'),
+			data:JSON.stringify({
+			}),
+			dataType: 'json',
+			contentType:'application/json;charset=utf-8',
+			success:function(json){
+				console.log(json)
+				if(json.retCode==0000){
+					if(getCookie('lng')=='CN'){
+						$('#hintBox').html('确认订舱成功！').show();
+					}else{
+						$('#hintBox').html('Successful！').show();
+					}
+					setTimeout(function(){
+						$('#hintBox').hide();
+					},700)
+				}else{
+					if(getCookie('lng')=='CN'){
+						$('#hintBox').html('确认订舱失败！').show();
+					}else{
+						$('#hintBox').html('Failure！').show();
+					}
+					setTimeout(function(){
+						$('#hintBox').hide();
+					},700)
+				}
+			},
+		})
+	})
 	function createLi(id,str,num){
 		var oTmp=document.getElementById(id);
 	    var oLi=oTmp.cloneNode(true);
@@ -275,7 +318,6 @@
 		if(isclick){
 			$('#append .Fees').removeClass('active')
 			$(this).addClass('active');
-			console.log($(this).attr('byorder'))
 			if($(this).attr('byorder')=='1'){
 				$('#ipt5').val($(this).find('.currencys:first-child').text());
 				$('#ipt5').attr('currenys',$(this).attr('currenys'));

@@ -30,7 +30,6 @@ $(function(){
 			$('.enterances2').on('scroll',function(){
 				switch (getCookie('nav1Count')){
 					case '0':
-					console.log(1)
 						currentScrollT[0]=$('.enterances2').scrollTop();
 						break;
 					case '1':
