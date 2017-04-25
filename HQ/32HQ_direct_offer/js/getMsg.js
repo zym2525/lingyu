@@ -31,7 +31,6 @@
 				telPhone($(ele).text());
 			}
 		})
-		
 	})
 	$('.comb').on('touchstart',function(){
 		$('.updateFee').hide();
@@ -51,7 +50,7 @@
 		for(var i=0;i<arr.length;i++){
 			arrCarrys.push({
 				'id': arr[i]['carryCode'],
-				'value': arr[i]['carryName'],
+				'value': arr[i]['carryCode'],
 			})
 		}
 	}

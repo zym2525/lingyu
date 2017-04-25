@@ -2,7 +2,6 @@
 	init();
 	initNav1();
 	initNav2();
-	initNav3();
 	$('footer div').on('touchstart',function(){
 		setCookie('currentCount',$(this).index(),28);
 		init();

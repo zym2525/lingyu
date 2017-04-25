@@ -284,7 +284,7 @@ header .list li:first-child{
 	
 }
 .enterances2 .content .container .btn1,.enterances3 .content .container .btn1{
-	left: 0.85rem;
+	right: 0.85rem;
 }
 .enterances2 .content .container .btn2,.enterances3 .content .container .btn2{
 	right: 0.85rem;

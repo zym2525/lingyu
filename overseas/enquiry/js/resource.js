@@ -46,10 +46,12 @@ var data=[
 	[
 		{'id': '0', 'value': '宁波铃与'},
 		{'id': '1', 'value': '泰国铃与'},
+		{'id': '0,1', 'value': '泰国铃与'},
 	],
 	[
-		{'id': 'LYZB', 'value': 'NINGBO LINGYU'},
-		{'id': 'TGLY', 'value': 'Thailand LINGYU'},
+		{'id': '0', 'value': 'NINGBO LINGYU'},
+		{'id': '1', 'value': 'Thailand LINGYU'},
+		{'id': '0,1', 'value': 'all'},
 	],
 ];
 var conpanyArr=[

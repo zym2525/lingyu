@@ -108,6 +108,7 @@ $(document).on('touchstart','#exit',function(){
 			}
 		},
 	});
+	return false;
 });
 // 修改密码
 $(document).on('touchstart','#cancel3',function(){
