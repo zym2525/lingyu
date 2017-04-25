@@ -75,7 +75,9 @@ $(function(){
 //							if(json.data){
 								sessionStorage.setItem('dataNodes',JSON.stringify(json.data));
 //							}
-//							window.history.back();
+							sessionStorage.removeItem('currentData3')
+							sessionStorage.removeItem('currentScrollT3')
+							window.history.back();
 						},700)
 					}else{
 						if(getCookie('lng')=='CN'){
@@ -89,6 +91,7 @@ $(function(){
 					}
 				},
 			})
+			
 //		}
 		return false;
 	})

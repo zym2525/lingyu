@@ -53,6 +53,7 @@ $(function(){
 //				$('#hintBox').hide();
 //			},700)
 //		}else{
+		if(getCookie('nav2Count')=='0'){
 			var t=new Date().getTime();
 			$.ajax({
 				type:"post",
@@ -96,6 +97,50 @@ $(function(){
 					}
 				},
 			})
+		}else{
+			var t=new Date().getTime();
+			$.ajax({
+				type:'POST',
+				async:false,
+				url:"http://106.14.251.28:8085/bizCenter/order/findHistoryOrder?accessToken="+getCookie('accessToken'),
+				data:JSON.stringify({
+					"orderCode": $('#orderCode').val(),
+		    		"mbl": $('#mbl').val(),
+		   	 		"createTimeBegin": startDate,
+		   			"createTimeEnd": endDate,
+				}),
+				contentType: "application/json; charset=utf-8",
+				success:function(json){
+					console.log(json)
+					if(json.code==0000){
+						if(getCookie('lng')=='CN'){
+							$('#hintBox').html('搜索成功！').show();
+						}else{
+							$('#hintBox').html('successful！').show();
+						}
+						setTimeout(function(){
+							$('#hintBox').hide();
+							if(json.data){
+								sessionStorage.setItem('dataNodes',JSON.stringify(json.data));
+							}
+							sessionStorage.removeItem('currentData2')
+							sessionStorage.removeItem('currentScrollT2')
+							window.history.back();
+						},700)
+					}else{
+						if(getCookie('lng')=='CN'){
+							$('#hintBox').html('搜索失败！').show();
+						}else{
+							$('#hintBox').html('failure！').show();
+						}
+						setTimeout(function(){
+							$('#hintBox').hide();
+						},700)
+					}
+				},
+			})
+		}
+			
 //		}
 		return false;
 	})

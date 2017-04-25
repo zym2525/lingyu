@@ -208,7 +208,7 @@ $(function(){
 		function loadNodes(){
 			if(bSinlogistics) return;
 			bSinlogistics=true;
-			if(sessionStorage.getItem('dataNodes')!=null){
+			if(sessionStorage.getItem('dataNodes')&&sessionStorage.getItem('dataNodes')!='[]'){
 				switch (getCookie('nav3Count')){
 					case '0':
 						$('#Nodes1').empty();
