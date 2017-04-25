@@ -105,6 +105,9 @@ function show(ele){
 							case 3:
 								open("../../supplier/02interface/interface.html");
 							  break;
+							case 4:
+								open("../../HQ/02interface/interface.html");
+							  break;
 						}
 						bSin=false;
 					}else{

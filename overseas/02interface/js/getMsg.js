@@ -63,7 +63,7 @@ $(function(){
 		
 		//懒加载
 		$('.enterances2').on('scroll',function(){
-			if(($(this)[0].scrollHeight-100)<($(this).height()+$(this).scrollTop())){
+			if(($(this)[0].scrollHeight-100)<=($(this).height()+$(this).scrollTop())){
 				switch (getCookie('nav1Count')){
 					case '0':
 						if(scrollBtn11) return;
