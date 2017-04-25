@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <meta name="renderer" content="webkit">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+<style>
+    html,body{
+        font-family: 微软雅黑;
+        height:100%;
+        overflow:hidden;
+    }
+    .swap{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f0f0f0;
+        width: 100%;
+        height: 100%;
+    }
+    .notice{
+        justify-content: center;
+        align-items: center;
+        width: 200px;
+        height: 250px;
+        background-color: #fff;
+        box-shadow: 0 2px 4px #000;
+    }
+    .notice img{
+        z-index: 99;
+        position: relative;
+        top: -45px;
+        left: 55px;
+    }
+    .notice h3,p{
+        text-align: center;
+    }
+    .notice h3{
+        font-size: 18px;
+    }
+    .notice p{
+        font-size: 12px;
+    }
+    .notice.success a{
+        background-color: #75C643;
+    }
+    .notice.success a:hover{
+        background-color: #B8E986;
+    }
+    .notice.error a{
+        background-color: #D0011B;
+    }
+    .notice.error a:hover{
+        background-color: #E47583;
+    }
+    .notice a{
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 140px;
+        height: 30px;
+        text-decoration: none;
+        margin-top: 20px;
+        margin-left: 30px;
+    }
+    .notice a:hover{
+        cursor: pointer;
+        text-decoration: none;
+    }
+    .notice span{
+        display: inline-flex;
+        font-size: 16px;
+        color: #FFFFFF;
+        letter-spacing: 0.66px;
+    }
+</style>
+<body>
+<div class="swap">
+    <div class="notice success">
+        <img src="img/success.png">
+        <h3>登记成功</h3>
+        <p>的降分理科；圣诞节福利</p>
+        <a><span>OK</span></a>
+    </div>
+    <div class="notice error">
+        <img src="img/error.png">
+        <h3>登记失败</h3>
+        <p>的降分理科；圣诞节福利</p>
+        <a><span>OK</span></a>
+    </div>
+</div>
+<script src="js/jquery-1.10.1.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>直邮首页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <meta name="renderer" content="webkit">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .background{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        border: 0;
+        left: 0;
+        top: 0;
+        }
+        .background img{
+            z-index: -1;
+        }
+        .login{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 99;
+        }
+        .login h1{
+            align-content: flex-start;
+        }
+        .login input{
+            align-content: center;
+        }
+        .login button{
+            align-self: flex-end;
+        }
+    </style>
+</head>
+<body>
+    <div class="swap">
+        <div class="container">
+            <div class="background">
+                <div class="login">
+                    <h1>宁波跨境贸易电子商务（进口）物流系统</h1>
+                    <input type="text">
+                    <input type="password">
+                    <ul class="dropdown-menu">
+                        <li><a href="#">普通用户入口</a></li>
+                        <li><a href="#">其他海外入口</a></li>
+                    </ul>
+                    <button>dd</button>
+                </div>
+            </div>
+            <img class="background" src='img/background.png'>
+        </div>
+    </div>
+    <script src="js/jquery-1.10.1.min.js"></script>
+</body>
+</html>
