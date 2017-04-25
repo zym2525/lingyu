@@ -76,7 +76,7 @@ $(function(){
 				oLi.on('touchstart',function(){
 					oLi.timer=setTimeout(()=>{
 			    		setCookie('port',$(this).text().split('(')[0]);
-			    		setCookie('code',$(this).attr('code'));
+			    		setCookie('code',$(this).find('span').attr('code'));
 			    		open(getCookie('local'));
 			    	},700);
 			    	$(this).on('touchmove',function(){

@@ -39,7 +39,7 @@ $(function(){
 			$('dd span').on('touchstart',function(){
 				$(this)[0].timer=setTimeout(()=>{
 		    		setCookie('port',$(this).text().split('(')[0]);
-		    		setCookie('code',$(this).attr('code'));
+		    		setCookie('code',$(this).find('span').attr('code'));
 		    		open(getCookie('local'));
 		    	},300);
 		    	$(this).on('touchmove',function(){

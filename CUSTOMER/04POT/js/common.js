@@ -40,7 +40,7 @@ $(function(){
 			$('dd').each(function(index,ele){
 				isClick($(ele),function(ele){
 					setCookie('port',ele.text().split('(')[0]);
-		    		setCookie('code',ele.attr('code'));
+		    		setCookie('code',ele.find('span').attr('code'));
 		    		open(getCookie('local'));
 				})
 			})
