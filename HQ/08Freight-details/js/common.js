@@ -63,9 +63,10 @@ $(function(){
     }));
     
     $('#btn').on('touchstart',function(){
-    	$('#btn').css('pointer-events','none');
-    	setTimeout(function(){$('#btn').css('pointer-events','all')},350);
-    	getSupplierCompanys(setSupplierCompanys);
+//  	$('#btn').css('pointer-events','none');
+//  	setTimeout(function(){$('#btn').css('pointer-events','all')},350);
+//  	getSupplierCompanys(setSupplierCompanys);
+		open('../02interface/interface.html');
 		return false;
 	});
 	$('.arrow').on('touchstart',function(){
